@@ -1,0 +1,660 @@
+{
+  "carousel": [
+    {
+      "id": 1,
+      "img": "https://demo.themnific.com/edulogy/wp-content/uploads/2020/04/selective-focus-photo-of-man-using-laptop-1438081-1920x1000.jpg",
+      "alt": "first img"
+    },
+    {
+      "id": 2,
+      "img": "https://cdn.pixabay.com/photo/2015/09/09/18/22/dictionary-932327_1280.jpg",
+      "alt": "second img"
+    },
+    {
+      "id": 1,
+      "img": "https://demo.themnific.com/edulogy/wp-content/uploads/2020/04/group-of-people-sitting-inside-room-2422294-1920x1000.jpg",
+      "alt": "third img"
+    }
+  ],
+  "category": [
+    {
+      "id": 1,
+      "cateogoryName": "Mens Casual Wear",
+      "offer": "40-80%",
+      "img": "https://img.freepik.com/free-photo/portrait-handsome-smiling-stylish-young-man-model-dressed-red-checkered-shirt-fashion-man-posing_158538-4911.jpg?w=1480&t=st=1705215397~exp=1705215997~hmac=a9029a4ec81a4a6c6ee58948835f54667e945fd0feda8ab85c568f9897d70047"
+    },
+    {
+      "id": 2,
+      "cateogoryName": "womens Ethnic wear",
+      "offer": "40-80%",
+      "img": "https://img.freepik.com/free-photo/low-angle-female-with-sunglasses_23-2148348911.jpg?size=626&ext=jpg&ga=GA1.1.929801155.1698819302&semt=ais"
+    },
+    {
+      "id": 3,
+      "cateogoryName": "Womens Activewear",
+      "offer": "40-80%",
+      "img": "https://img.freepik.com/free-photo/full-shot-woman-wearing-headphones_23-2149142400.jpg?size=626&ext=jpg&ga=GA1.1.929801155.1698819302&semt=ais"
+    },
+    {
+      "id": 4,
+      "cateogoryName": "Mens Activewear",
+      "offer": "40-80%",
+      "img": "https://img.freepik.com/free-photo/portrait-stylish-arab-beard-man-wear-grey-turtleneck-arabian-model-guy_627829-4318.jpg?size=626&ext=jpg&ga=GA1.1.929801155.1698819302&semt=ais"
+    },
+    {
+      "id": 5,
+      "cateogoryName": "Sports Wear",
+      "offer": "40-80%",
+      "img": "https://img.freepik.com/free-photo/attractive-couple-slim-brunette-female-handsome-guy-sportswear-cuddling-studio-isolated-dark-background_613910-6719.jpg?size=626&ext=jpg&ga=GA1.1.929801155.1698819302&semt=ais"
+    },
+    {
+      "id": 6,
+      "cateogoryName": "Kids Wear",
+      "offer": "40-80%",
+      "img": "https://img.freepik.com/free-photo/full-shot-kids-posing-together_23-2149853383.jpg?size=626&ext=jpg&ga=GA1.1.929801155.1698819302&semt=ais"
+    },
+    {
+      "id": 7,
+      "cateogoryName": "Men's Footwear",
+      "offer": "40-80%",
+      "img": "https://img.freepik.com/premium-photo/fashion-sneakers-vivid-abstract-background-sport-shoes-neon-light-blue-orange-gradient_479776-7557.jpg?size=626&ext=jpg&ga=GA1.1.929801155.1698819302&semt=ais"
+    },
+    {
+      "id": 8,
+      "cateogoryName": "Womens Footwear",
+      "offer": "40-80%",
+      "img": "https://img.freepik.com/free-photo/woman-posing-with-stylish-footwear-summer-fashion-bag-long-legs-shopping_285396-489.jpg?size=626&ext=jpg&ga=GA1.1.929801155.1698819302&semt=ais"
+    },
+    {
+      "id": 9,
+      "cateogoryName": "Watches",
+      "offer": "40-80%",
+      "img": "https://img.freepik.com/free-photo/new-smartwatch-balancing-with-hand_23-2150296477.jpg?size=626&ext=jpg&ga=GA1.1.929801155.1698819302&semt=ais"
+    },
+    {
+      "id": 10,
+      "cateogoryName": "Grooming",
+      "offer": "40-80%",
+      "img": "https://img.freepik.com/free-photo/collection-beauty-products-with-copy-space_23-2148620110.jpg?size=626&ext=jpg&ga=GA1.1.929801155.1698819302&semt=ais"
+    }
+  ],
+  "products": [
+    {
+      "id": 1,
+      "brandName": "Bene Kleed",
+      "category": "mens casual wear",
+      "name": "sweatshirt",
+      "offerPrice": 800,
+      "oldPrice": 1300,
+      "thumbImg": "https://img.freepik.com/free-photo/man-black-sweater-black-bucket-hat-youth-apparel-shoot_53876-102294.jpg?size=626&ext=jpg&ga=GA1.1.929801155.1698819302&semt=sph",
+      "description": "Pure Cotton Relaxed Fit Pullover Sweatshirt",
+      "images": [
+        {
+          "image": "https://img.freepik.com/free-photo/black-sweater-apparel-shoot-with-design-space_53876-102943.jpg?size=626&ext=jpg&ga=GA1.1.929801155.1698819302&semt=sph",
+          "alt": "f"
+        },
+        {
+          "image": "https://img.freepik.com/free-photo/man-black-sweater-black-bucket-hat-youth-apparel-shoot_53876-102294.jpg?size=626&ext=jpg&ga=GA1.1.929801155.1698819302&semt=sph",
+          "alt": "f"
+        },
+        {
+          "image": "https://img.freepik.com/premium-psd/men-with-turtleneck-sweater-mockup-with-gray-trousers_53876-98655.jpg?size=626&ext=jpg",
+          "alt": "f"
+        }
+      ],
+      "size": [
+        "s",
+        "m",
+        "l",
+        "xl",
+        "xxl"
+      ],
+      "productDetails": [
+        {
+          "product_material_detail": "Black solid relaxed fit sweatshirt has a round neck, 1 pocket, long sleeves, straight hem",
+          "size&fit": [
+            {
+              "title": "Relaxed Fit"
+            },
+            {
+              "title": "The model (height 6') is wearing a size M"
+            }
+          ],
+          "material&care": [
+            {
+              "title": "100% Cotton"
+            },
+            {
+              "title": "Machine Wash"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "category": "womens Ethnic wear",
+      "name": "red kurta",
+      "brandName": "SINGNI",
+      "thumbImg": "https://img.freepik.com/free-photo/young-woman-beautiful-red-dress_1303-17503.jpg?size=626&ext=jpg&ga=GA1.1.929801155.1698819302&semt=ais",
+      "description": " Ethnic Motifs Embroidered Mirror Work Kurta with Trousers & Dupatta",
+      "offerPrice": 1099,
+      "oldPrice": 5399,
+      "size": [
+        "s",
+        "m",
+        "l",
+        "xl",
+        "xxl"
+      ],
+      "images": [
+        {
+          "image": "https://img.freepik.com/free-photo/young-woman-beautiful-red-dress_1303-17508.jpg?size=626&ext=jpg&ga=GA1.1.929801155.1698819302&semt=ais"
+        },
+        {
+          "image": "https://img.freepik.com/free-photo/young-woman-beautiful-red-dress_1303-17506.jpg?size=626&ext=jpg&ga=GA1.1.929801155.1698819302&semt=ais"
+        },
+        {
+          "image": "https://img.freepik.com/free-photo/young-woman-beautiful-dress_1303-17514.jpg?size=626&ext=jpg&ga=GA1.1.929801155.1698819302&semt=ais"
+        },
+        {
+          "image": "https://img.freepik.com/free-photo/young-woman-beautiful-dress_1303-17516.jpg?size=626&ext=jpg&ga=GA1.1.929801155.1698819302&semt=ais"
+        },
+        {
+          "image": "https://img.freepik.com/free-photo/young-woman-beautiful-red-dress_1303-17507.jpg?size=626&ext=jpg&ga=GA1.1.929801155.1698819302&semt=ais"
+        }
+      ],
+      "productDetails": [
+        {
+          "product_material_detail": "Purple embroidered Kurta with Trousers with dupatta",
+          "kurta design": [
+            "Ethnic motifs embroidered",
+            "Anarkali shape",
+            "Regular style",
+            "Round neck, three-quarter regular sleeves",
+            "Mirror work detail",
+            "Floor length length with flared hem",
+            "Viscose rayon machine weave fabric"
+          ],
+          "size&fit": [
+            {
+              "title": "Relaxed Fit"
+            },
+            {
+              "title": "The model (height 6') is wearing a size M"
+            }
+          ],
+          "material&care": [
+            {
+              "title": "100% Cotton"
+            },
+            {
+              "title": "Machine Wash"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 11,
+      "category": "womens Ethnic wear",
+      "name": "red kurta",
+      "brandName": "SINGNI",
+      "thumbImg": "https://img.freepik.com/free-photo/young-woman-beautiful-red-dress_1303-17503.jpg?size=626&ext=jpg&ga=GA1.1.929801155.1698819302&semt=ais",
+      "description": " Ethnic Motifs Embroidered Mirror Work Kurta with Trousers & Dupatta",
+      "offerPrice": "1099",
+      "oldPrice": "5399",
+      "size": [
+        "s",
+        "m",
+        "l",
+        "xl",
+        "xxl"
+      ],
+      "images": [
+        {
+          "image": "https://img.freepik.com/free-photo/young-woman-beautiful-red-dress_1303-17508.jpg?size=626&ext=jpg&ga=GA1.1.929801155.1698819302&semt=ais"
+        },
+        {
+          "image": "https://img.freepik.com/free-photo/young-woman-beautiful-red-dress_1303-17506.jpg?size=626&ext=jpg&ga=GA1.1.929801155.1698819302&semt=ais"
+        },
+        {
+          "image": "https://img.freepik.com/free-photo/young-woman-beautiful-dress_1303-17514.jpg?size=626&ext=jpg&ga=GA1.1.929801155.1698819302&semt=ais"
+        },
+        {
+          "image": "https://img.freepik.com/free-photo/young-woman-beautiful-dress_1303-17516.jpg?size=626&ext=jpg&ga=GA1.1.929801155.1698819302&semt=ais"
+        },
+        {
+          "image": "https://img.freepik.com/free-photo/young-woman-beautiful-red-dress_1303-17507.jpg?size=626&ext=jpg&ga=GA1.1.929801155.1698819302&semt=ais"
+        }
+      ],
+      "productDetails": [
+        {
+          "product_material_detail": "Purple embroidered Kurta with Trousers with dupatta",
+          "kurta design": [
+            "Ethnic motifs embroidered",
+            "Anarkali shape",
+            "Regular style",
+            "Round neck, three-quarter regular sleeves",
+            "Mirror work detail",
+            "Floor length length with flared hem",
+            "Viscose rayon machine weave fabric"
+          ],
+          "size&fit": [
+            {
+              "title": "Relaxed Fit"
+            },
+            {
+              "title": "The model (height 6') is wearing a size M"
+            }
+          ],
+          "material&care": [
+            {
+              "title": "100% Cotton"
+            },
+            {
+              "title": "Machine Wash"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "brandName": "Balasi",
+      "name": "Shirt",
+      "category": "mens casual wear",
+      "description": "Pure Cotton Relaxed Fit Shirt",
+      "offerPrice": "1099",
+      "oldPrice": "1899",
+      "thumbImg": "https://img.freepik.com/premium-photo/full-length-portrait-pensive-handsome-man-posing-with-hands-pockets-isolated-gray-wall_171337-83308.jpg?size=626&ext=jpg&ga=GA1.1.929801155.1698819302&semt=ais",
+      "size": [
+        "s",
+        "m",
+        "l",
+        "xl",
+        "xxl"
+      ],
+      "images": [
+        {
+          "image": "https://img.freepik.com/premium-photo/full-length-portrait-casual-young-man-fastening-button-isolated-gray-wall_171337-83306.jpg?size=626&ext=jpg&ga=GA1.1.929801155.1698819302&semt=ais"
+        },
+        {
+          "image": "https://img.freepik.com/premium-photo/back-view-portrait-casual-man-walking-looking-shoulder-gray-wall_171337-83302.jpg?size=626&ext=jpg"
+        },
+        {
+          "image": "https://img.freepik.com/premium-photo/full-length-portrait-young-man-saluting-isolated-gray-wall_171337-83301.jpg?size=626&ext=jpg"
+        }
+      ],
+      "productDetails": [
+        {
+          "product_material_detail": "Black solid relaxed fit shirt has 1 pocket, long sleeves, straight hem",
+          "size&fit": [
+            {
+              "title": "Relaxed Fit"
+            },
+            {
+              "title": "The model (height 6') is wearing a size M"
+            }
+          ],
+          "material&care": [
+            {
+              "title": "100% Cotton"
+            },
+            {
+              "title": "Machine Wash"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "brandName": "parasi",
+      "category": "kids Wear",
+      "offerPrice": "799",
+      "oldPrice": "1199",
+      "thumbImg": "https://img.freepik.com/free-photo/low-angle-little-boy-posing_23-2148445671.jpg?size=626&ext=jpg&ga=GA1.1.929801155.1698819302&semt=ais",
+      "description": "Pure Cotton Relaxed Fit Pullover Sweatshirt",
+      "size": [
+        "s",
+        "m",
+        "l",
+        "xl",
+        "xxl"
+      ],
+      "images": [
+        {
+          "image": "https://img.freepik.com/premium-photo/schoolboy-boy-jeans-shirt-goes-forward-back-school-isolated-white-background-vertical_120897-2365.jpg?size=626&ext=jpg&ga=GA1.1.929801155.1698819302&semt=ais"
+        },
+        {
+          "image": "https://img.freepik.com/free-photo/portrait-cute-little-kid-boy-stylish-jeans-clothes-looking-camera-against-white-studio-wall_155003-13445.jpg?size=626&ext=jpg&ga=GA1.1.929801155.1698819302&semt=ais"
+        },
+        {
+          "image": "https://img.freepik.com/free-photo/full-length-portrait-cute-little-kid-boy-stylish-jeans-clothes-smiling-standing-white-kids-fashion-concept_155003-20308.jpg?size=626&ext=jpg&ga=GA1.1.929801155.1698819302&semt=ais"
+        }
+      ],
+      "productDetails": [
+        {
+          "product_material_detail": "Black solid relaxed fit sweatshirt has a round neck, 1 pocket, long sleeves, straight hem",
+          "size&fit": [
+            {
+              "title": "Relaxed Fit"
+            },
+            {
+              "title": "The model (height 6') is wearing a size M"
+            }
+          ],
+          "material&care": [
+            {
+              "title": "100% Cotton"
+            },
+            {
+              "title": "Machine Wash"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "brandName": "vector",
+      "name": "men sport wear",
+      "category": "sports Wear",
+      "thumbImg": "https://img.freepik.com/free-photo/man-fitness-workout_144627-25319.jpg?size=626&ext=jpg&ga=GA1.1.929801155.1698819302&semt=ais",
+      "offerPrice": "399",
+      "oldPrice": "899",
+      "gender": "male",
+      "description": "Pure Cotton Relaxed Fit Pullover Sweatshirt",
+      "size": [
+        "s",
+        "m",
+        "l",
+        "xl",
+        "xxl"
+      ],
+      "images": [
+        {
+          "image": "https://img.freepik.com/free-photo/man-posing-stairs-while-wearing-athletic-wear_23-2148773866.jpg?size=626&ext=jpg&ga=GA1.1.929801155.1698819302&semt=ais"
+        },
+        {
+          "image": "https://img.freepik.com/premium-photo/handsome-confident-young-sportsman-working-out-beach-doing-exercises-with-heavy-ball_171337-55142.jpg?size=626&ext=jpg&ga=GA1.1.929801155.1698819302&semt=ais"
+        },
+        {
+          "image": "https://img.freepik.com/free-photo/side-view-man-working-out-outdoors-athletic-wear_23-2148773864.jpg?size=626&ext=jpg&ga=GA1.1.929801155.1698819302&semt=ais"
+        }
+      ],
+      "productDetails": [
+        {
+          "product_material_detail": "Black solid relaxed fit sweatshirt has a round neck, 1 pocket, long sleeves, straight hem",
+          "size&fit": [
+            {
+              "title": "Relaxed Fit"
+            },
+            {
+              "title": "The model (height 6') is wearing a size M"
+            }
+          ],
+          "material&care": [
+            {
+              "title": "100% Cotton"
+            },
+            {
+              "title": "Machine Wash"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "brandName": "vector",
+      "category": "sports Wear",
+      "name": "women sport wear",
+      "thumbImg": "https://img.freepik.com/free-photo/strict-girl-glamour-salon-styling_1303-417.jpg?size=626&ext=jpg&ga=GA1.1.929801155.1698819302&semt=ais",
+      "offerPrice": "399",
+      "oldPrice": "899",
+      "gender": "female",
+      "description": "Pure Cotton Relaxed Fit Pullover Sweatshirt",
+      "size": [
+        "s",
+        "m",
+        "l",
+        "xl",
+        "xxl"
+      ],
+      "images": [
+        {
+          "image": "https://img.freepik.com/free-photo/face-young-stylish-woman-long_1303-406.jpg?size=626&ext=jpg&ga=GA1.1.929801155.1698819302&semt=ais"
+        },
+        {
+          "image": "https://img.freepik.com/free-photo/woman-model-demonstrating-cloths_1303-30861.jpg?size=626&ext=jpg&ga=GA1.1.929801155.1698819302&semt=ais"
+        },
+        {
+          "image": "https://img.freepik.com/free-photo/woman-working-out-outdoors-alone_23-2150343803.jpg?size=626&ext=jpg&ga=GA1.1.929801155.1698819302&semt=ais"
+        }
+      ],
+      "productDetails": [
+        {
+          "product_material_detail": "Black solid relaxed fit sweatshirt has a round neck, 1 pocket, long sleeves, straight hem",
+          "size&fit": [
+            {
+              "title": "Relaxed Fit"
+            },
+            {
+              "title": "The model (height 6') is wearing a size M"
+            }
+          ],
+          "material&care": [
+            {
+              "title": "100% Cotton"
+            },
+            {
+              "title": "Machine Wash"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "brandName": "Bene",
+      "category": "watches",
+      "offerPrice": "4000",
+      "oldPrice": "6000",
+      "thumbImg": "https://img.freepik.com/free-photo/rendering-smart-home-device_23-2151039301.jpg?size=626&ext=jpg&ga=GA1.1.929801155.1698819302&semt=sph",
+      "description": "Apple watch series 8",
+      "size": [
+        "onesize"
+      ],
+      "images": [
+        {
+          "image": "https://img.freepik.com/free-photo/new-smartwatch-balancing-with-hand_23-2150296477.jpg?size=626&ext=jpg&ga=GA1.1.929801155.1698819302&semt=sph"
+        },
+        {
+          "image": "https://img.freepik.com/free-photo/rendering-smart-home-device_23-2151039302.jpg?size=626&ext=jpg&ga=GA1.1.929801155.1698819302&semt=sph"
+        },
+        {
+          "image": "https://img.freepik.com/free-photo/rendering-smart-home-device_23-2151039301.jpg?size=626&ext=jpg&ga=GA1.1.929801155.1698819302&semt=sph"
+        }
+      ],
+      "productDetails": [
+        {
+          "product_material_detail": "Black solid relaxed fit sweatshirt has a round neck, 1 pocket, long sleeves, straight hem",
+          "size&fit": [
+            {
+              "title": "Relaxed Fit"
+            },
+            {
+              "title": "The model (height 6') is wearing a size M"
+            }
+          ],
+          "material&care": [
+            {
+              "title": "100% Cotton"
+            },
+            {
+              "title": "Machine Wash"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "brandName": "Zapriyah",
+      "category": "watches",
+      "offerPrice": "2500",
+      "oldPrice": "4000",
+      "thumbImg": "https://img.freepik.com/free-photo/stylish-golden-watch-white-surface_181624-27078.jpg?size=626&ext=jpg&ga=GA1.1.929801155.1698819302&semt=ais",
+      "description": "Zapriyah watchi",
+      "size": [
+        "onesize"
+      ],
+      "images": [
+        {
+          "image": "https://img.freepik.com/free-photo/minimal-classic-black-watch-girl-hand_1150-10943.jpg?size=626&ext=jpg&ga=GA1.1.929801155.1698819302&semt=ais"
+        },
+        {
+          "image": "https://img.freepik.com/free-photo/business-lady-eyeglasses-looks-watch-pink-background-beautiful-serious-girl-with-red-lips-beige-stylish-suit-posing_197531-18648.jpg?size=626&ext=jpg&ga=GA1.1.929801155.1698819302&semt=ais"
+        },
+        {
+          "image": "https://img.freepik.com/free-photo/angry-businesswoman-looking-her-watch-outdoors_23-2148767050.jpg?size=626&ext=jpg&ga=GA1.1.929801155.1698819302&semt=ais"
+        }
+      ],
+      "productDetails": [
+        {
+          "product_material_detail": "Black solid relaxed fit sweatshirt has a round neck, 1 pocket, long sleeves, straight hem",
+          "size&fit": [
+            {
+              "title": "Relaxed Fit"
+            },
+            {
+              "title": "The model (height 6') is wearing a size M"
+            }
+          ],
+          "material&care": [
+            {
+              "title": "100% Cotton"
+            },
+            {
+              "title": "Machine Wash"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "brandName": "Balad",
+      "category": "womens footwear",
+      "offerPrice": "4000",
+      "oldPrice": "6000",
+      "thumbImg": "https://img.freepik.com/free-photo/women-s-red-high-heel-shoes-formal-fashion_53876-101501.jpg?size=626&ext=jpg&ga=GA1.1.929801155.1698819302&semt=ais",
+      "description": "Apple watch series 8",
+      "size": [
+        "5",
+        "6",
+        "7",
+        "8",
+        "9",
+        "10"
+      ],
+      "images": [
+        {
+          "image": "https://img.freepik.com/free-photo/close-up-details-legs-pink-sandals-stylish-woman-walking-city-street-printed-colorful-skirt-holding-pink-leather-backpack-summer-style-footwear-trend_285396-2898.jpg?size=626&ext=jpg&ga=GA1.1.929801155.1698819302&semt=ais"
+        },
+        {
+          "image": "https://img.freepik.com/free-photo/close-up-details-legs-pink-sandals-stylish-woman-walking-city-street-printed-colorful-skirt-holding-pink-leather-backpack-summer-style-footwear-trend_285396-2900.jpg?size=626&ext=jpg&ga=GA1.1.929801155.1698819302&semt=ais"
+        },
+        {
+          "image": "https://img.freepik.com/free-photo/young-stylish-beautiful-woman-blue-printed-dress-red-bag-fashionable-outfit-trendy-apparel-sitting-yellow-high-heel-shoes-accessories-close-up-legs-details_285396-3799.jpg?size=626&ext=jpg&ga=GA1.1.929801155.1698819302&semt=ais"
+        }
+      ],
+      "productDetails": [
+        {
+          "product_material_detail": "Black solid relaxed fit sweatshirt has a round neck, 1 pocket, long sleeves, straight hem",
+          "size&fit": [
+            {
+              "title": "Relaxed Fit"
+            },
+            {
+              "title": "The model (height 6') is wearing a size M"
+            }
+          ],
+          "material&care": [
+            {
+              "title": "100% Cotton"
+            },
+            {
+              "title": "Machine Wash"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "brandName": "Bene",
+      "category": "Grooming",
+      "offerPrice": 300,
+      "oldPrice": 400,
+      "thumbImg": "https://img.freepik.com/free-photo/fresh-scent-purple-flower-glass-bottle-generative-ai_188544-9642.jpg?size=626&ext=jpg&ga=GA1.1.929801155.1698819302&semt=sph",
+      "description": "Apple watch series 8",
+      "size": [
+        "onsize"
+      ],
+      "images": [
+        {
+          "image": "https://img.freepik.com/free-photo/dark-glass-bottle-with-single-liquid-drop-generative-ai_188544-9634.jpg?size=626&ext=jpg&ga=GA1.1.929801155.1698819302&semt=sph"
+        },
+        {
+          "image": "https://img.freepik.com/premium-photo/elegant-glass-perfume-bottle-dark-stone-background-generative-ai_971989-3278.jpg?size=626&ext=jpg&ga=GA1.1.929801155.1698819302&semt=sph"
+        },
+        {
+          "image": "https://img.freepik.com/premium-photo/bottle-perfume-with-flower-top_910325-52.jpg?size=626&ext=jpg&ga=GA1.1.929801155.1698819302&semt=sph"
+        }
+      ],
+      "productDetails": [
+        {
+          "product_material_detail": "Black solid relaxed fit sweatshirt has a round neck, 1 pocket, long sleeves, straight hem",
+          "size&fit": [
+            {
+              "title": "Relaxed Fit"
+            },
+            {
+              "title": "The model (height 6') is wearing a size M"
+            }
+          ],
+          "material&care": [
+            {
+              "title": "100% Cotton"
+            },
+            {
+              "title": "Machine Wash"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "bag": [
+    {
+      "id": 1,
+      "productId": 2,
+      "quantity": 1,
+      "size": "l"
+    },
+    {
+      "id": {
+        "id": 1,
+        "productId": 2,
+        "quantity": 1,
+        "size": "l"
+      },
+      "productId": 4,
+      "quantity": 1,
+      "size": "s"
+    }
+  ]
+}

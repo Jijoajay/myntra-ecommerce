@@ -1,0 +1,163 @@
+.bag-main{
+    display: flex;
+    flex-direction: column;
+}
+.bag-main header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70px;
+    
+}
+header p{
+    padding: 0px 5px 0px 5px;
+    cursor: pointer;
+}
+.payment-section{
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    gap: 50px;
+}
+.item-place{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.login-item{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 600px;
+    height: 70px;
+    border: .5px solid black;
+    padding: 10px;
+}
+.login-item button{
+    margin-right: 30px;
+    border: 1px solid red;
+    background-color: white;
+    color: red;
+    font-weight: 600;
+    height: 40px;
+    width: 120px;
+}
+.offer-zone{
+    display: flex;
+    flex-direction: column;
+    width: 600px;
+    height: 100px;
+    border: .5px solid black;
+    padding: 20px 20px 20px 20px;
+}
+.offer-zone .offer{
+    display: flex;
+    gap: 10px;
+}
+.offer-zone .offer-list{
+    padding-left: 15px;
+}
+.checkout-items{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.checkout-items div{
+    display: flex;
+    gap: 10px;
+}
+.cloth-container{
+    display: flex;
+    width: 600px;
+    flex-direction: column;
+    border: 0.2px solid black;
+    padding: 10px 10px 10px 10px;
+}
+.cloth-detail{
+    display: flex;
+    justify-content: space-between;
+}
+.cloth-detail img{
+    width: 111px;
+    height: 148px;
+}
+.cloth-content{
+    display: flex;
+    gap: 10px;
+}
+.order-place{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.coupons{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.coupon{
+    display: flex;
+    justify-content: space-between;
+}
+.coupon div{
+    display: flex;
+    gap: 20px;
+}
+.gift{
+    display: flex;
+    gap: 10px;
+    background-color: #FFF1EC;
+}
+.gift img{
+    height: 99px;
+    width: 38px;
+}
+.gift div{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px 0px 10px 0px;
+}
+.total{
+    font-weight: 900;
+}
+.coupons span{
+    color:#FF3F6C;
+    font-weight: 700;
+    padding-left: 5px;
+    cursor: pointer;
+}
+.coupons .placeOrder{
+    color: #FF3F6C;
+    height: 50px;
+}
+.underLine{
+    text-decoration:underline;
+    text-decoration-color: #FF3F6C;
+    text-underline-offset: 4px;
+    text-decoration-thickness: 2px;
+}
+.size-quantity{
+    display: flex;
+    gap: 20px;
+}
+.price-offer{
+    display: flex;
+    gap: 10px;
+}
+.off{
+    color: #FF3F6C;
+}
+.span{
+    text-decoration: line-through;
+    text-decoration-color: #FF3F6C;
+}
+.cloth-check{
+    position: absolute;
+    margin: 5px;
+    padding: 5px;
+}
+
+
+
+
