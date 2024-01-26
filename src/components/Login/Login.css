@@ -1,0 +1,99 @@
+.loginPage{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #de8a9e;
+    height: 100vh;
+}
+.login-container{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    background-color: #fff;
+    height: 400px;
+    width: 400px;
+    padding: 36px 36px 0px 36px;
+}
+.login-or{
+    font-weight: 200;
+    font-size: 12px;
+}
+.fixed-placeholder{
+    position: absolute;
+    top: 46%;
+    left: 39.5%; 
+    
+}
+.login-container input{
+    padding-left: 53px;
+    padding-top: 2px;
+    font-size: 16px;
+    height: 40px;
+}
+.login-container input::placeholder{
+    font-size: 12px;
+}
+.login-container button{
+    height: 40px;
+    border: none;
+    font-weight: 800;
+    color: white;
+    background-color: #FF3F6C;
+}
+.login-container a{
+    color: #FF3F6C;
+}
+.login-container p{
+    font-size: 12px;
+}
+.input-div{
+    display: flex;
+    flex-direction: column;
+}
+.error{
+    font-size: 10px;
+    color: red;
+}
+.otp-boxes{
+    display: flex;
+    gap: 10px;
+}
+.otp-boxes input{
+    width: 40px;
+    height: 40px;
+    padding: 5px;
+    text-align: center;
+}
+.login-container img{
+    height: 90px;
+    width: 90px;
+}
+.login-container h5{
+    color:#FF3F6C;
+    cursor:pointer;
+}
+.login-container .otp-span{
+    color: #FF3F6C;
+    cursor: pointer;
+}
+.login-container .login-input{
+    padding-left: 10px ;
+    padding-top: 0px;
+    width: 90%;
+}
+.login-input::placeholder{
+    font-size: 12px;
+}
+
+.floating-placeholder{
+    margin: 0px;
+    padding: 0px;
+    position:relative;
+    top: 8px;
+    width:max-content;
+    background-color: white;
+    left: 10px;
+    transition: .3s all;
+    pointer-events: none;
+}
+

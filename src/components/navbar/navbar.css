@@ -3,6 +3,7 @@
     margin: 0;
     box-sizing: border-box;
 }
+
 .navbar-container{
     background: none;
     font-family:  Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
@@ -14,11 +15,19 @@
     cursor: pointer;
     box-shadow:0px 0px 20px 1px rgba(0, 0, 0, 0.3);
 }
+.navbar-container img{
+    height: 53px;
+}
 .navbar-menu ul{
     display: flex;
     cursor: pointer;
 }
 .navbar-menu ul li{
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
     margin-left: 20px;
     list-style: none;
     font-size: 20px;
@@ -29,12 +38,20 @@
 .navbar-icons{
     display: flex;
     justify-content: space-around;
+    align-items: center;
+    height: 80px;
 }
 .icon{
     cursor: pointer;
     display: flex;
     flex-direction: column;
     margin-left: 20px;
+}
+.profile{
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .navbar-menu ul li:hover
@@ -60,5 +77,84 @@
     display: flex;
     flex-direction: column;
 }
+
+.hover-container{
+    position: absolute;
+    top: 99%;
+    right: 10%;
+    background-color: white;
+    padding: 10px;
+    width: 300px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+}
+.profileItem{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+.profileItem button{
+    height: 30px;
+    color: #FF3F6C;
+    font-weight: 800;
+    border: .1px solid gray;
+    background-color: white;
+
+}
+.profileItem button:hover{
+    border: 1px solid #FF3F6C;
+}
+.profileItem p{
+    font-size: 14px;
+}
+.profileItem p:hover{
+    font-weight: 600;
+}
+.hover-menu-container{
+    position: absolute;
+    top: 100%;
+    left: 30%;
+    background-color: white;
+    padding: 10px;
+    width: 400px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+}
+.category-cont{
+    display: flex;
+    flex-direction: row;
+    gap: 18px;
+}
+.category-cont h4{
+    color: red;
+}
+.category-cont p{
+    font-size: 14px;
+}
+.hover-product{
+    gap: 10px;
+    display: flex;
+    flex-direction: column;
+}
+.category-Link{
+    gap: 5px;
+    flex-direction: column;
+    display: flex;
+}
+.category-cont p:hover{
+    font-weight: 550;
+}
+.heart{
+    color: black;
+    text-decoration: none;
+}
+
+
 
 

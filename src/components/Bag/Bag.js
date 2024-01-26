@@ -1,22 +1,21 @@
-import React,{useState} from 'react'
+import React,{useEffect, useState} from 'react'
 import { BiSolidOffer } from "react-icons/bi";
 import { IoReturnDownBackOutline } from "react-icons/io5";
 import { TiTick } from "react-icons/ti";
 import { BiSolidCoupon } from "react-icons/bi";
 import { RxCross1 } from "react-icons/rx";
 import "./Bag.css"
-import { filter } from 'lodash';
-import fetch from '../../api/fetch';
-export const Bag = ({pinCode, gotPin, product,bagProduct,setBagProduct}) => {
+export const Bag = ({pinCode, gotPin, product,bagProduct,setBagProduct, wishList}) => {
     const [currentSection, setCurrentSection] = useState(1)
     const [selected, setSelected] = useState([])
+    const [filteredProducts, setFilteredProducts] = useState([]);
     const bagId = bagProduct.map((bag)=>bag.productId)
     const bag = bagProduct.map((bag)=>bag)
-    const filteredProducts = product.filter((pro) => bagId.includes(pro.id));
     const handleCheckBoxChange = (productId)=>{
         if(selected.includes(productId)){
             setSelected(selected.filter((id)=> id !== productId))
         }else{
+            moveToTop(productId)
             setSelected([...selected,productId])
         }
     }
@@ -27,14 +26,16 @@ export const Bag = ({pinCode, gotPin, product,bagProduct,setBagProduct}) => {
             setSelected(bagId)
         }
     }
-    const handleRemove = async()=>{
-        try {
-            const respone = await fetch.delete('/bag')
-            setBagProduct([])
-        } catch (error) {
-            
-        }
+    const moveToTop = (productId)=>{
+        const index = filteredProducts.findIndex((pro)=> pro.id === productId);
+        const selectedProduct = filteredProducts[index]
+        filteredProducts.splice(index,1)
+        filteredProducts.unshift(selectedProduct)
     }
+    useEffect(()=>{
+        const filteredProducts = product.filter((pro) => bagId.includes(pro.id));
+        setFilteredProducts(filteredProducts)
+    },[])
   return (
     <main className='bag-main'>
         <header>
@@ -78,7 +79,7 @@ export const Bag = ({pinCode, gotPin, product,bagProduct,setBagProduct}) => {
                         <h4>Items Selected</h4>
                     </div>
                     <div>
-                        <p onClick={()=>handleRemove}>Remove</p>
+                        <p>Remove</p>
                         <p>|</p>
                         <p>Move to wishlist</p>
                     </div>

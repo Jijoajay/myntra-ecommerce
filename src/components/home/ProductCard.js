@@ -4,11 +4,12 @@ import { TiStarFullOutline } from "react-icons/ti";
 import { IoIosHeartEmpty } from "react-icons/io";
 import _debounce from "lodash/debounce"
 import { Carousel } from '../navbar/Carousel';
+import { IoIosHeart } from "react-icons/io";
 
-export const ProductCard = ({isProductDetail, category, product}) => {
+export const ProductCard = ({isProductDetail, category, handleAddToWishList, wishList}) => {
   
   const [isHover, setIsHover] = useState(Array(category.length).fill(false))
-  const [isSimilarIconHover, setIsSimilarIconHover] = useState(false)
+  const wishListId = wishList?.map((item)=>item.productId)
 
   const handleMouseEnter = (id) => {
     setIsHover((prevIsHover) => {
@@ -25,14 +26,15 @@ export const ProductCard = ({isProductDetail, category, product}) => {
       return newHoverStates;
     });
   }, 100);
+
   return (
     <>
-      {category.map( (cat,index)=>(
+      {category && category.length > 0 && category.map( (cat,index)=>(
       <Link to={`${isProductDetail ? `/buyProduct/${cat.id}` : `/product/${cat.cateogoryName}`}`} style={{textDecoration:"none"}} >
           <div className={`${ isProductDetail ? "productCard-containers" : "productCard-container"}`} key={index} onMouseEnter={()=>handleMouseEnter(index)} onMouseLeave={()=>handleMouseLeave(index)} >
               <div className={`${isProductDetail ? "img-containers" : "img-container"}`}>
                 {isProductDetail ? isHover[index] ? (
-                  <Carousel carousel={cat.images} isProductDetail={true}/>
+                    <Carousel carousel={cat.images} isProductDetail={true}/>
                   ):(
                   <img src={cat.img || cat.thumbImg} />
                 ):<img src={cat.img || cat.thumbImg} />}
@@ -44,9 +46,18 @@ export const ProductCard = ({isProductDetail, category, product}) => {
               <div className={`${isProductDetail ?'detail-containers': "detail-container"}`}>
                 {isProductDetail ? ( isHover[index] ? (
                   <>
-                    <div className='wishlist-productCard'>
-                      <IoIosHeartEmpty size={20} className='heart-icon'/>
-                      <p>WISHLIST</p>
+                    <div className='wishlist-productCard' onClick={(e)=>e.preventDefault()}>
+                      {Boolean(wishListId.includes(cat.id)) ? 
+                      <>
+                        <IoIosHeart   size={20} className='heart-active-icon'/>
+                        <p>WISHLISTED</p>
+                      </>
+                      :
+                      <>
+                        <IoIosHeartEmpty size={20} className='heart-icon'/>
+                        <p onClick={()=>handleAddToWishList(cat.id)}>WISHLIST</p>
+                      </>
+                      }
                     </div>
                     <p className='size'>Sizes: S </p>
                     <h4>{isProductDetail ? "₹"+ cat.offerPrice : "Shop Now"}</h4>

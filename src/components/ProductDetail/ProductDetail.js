@@ -1,91 +1,92 @@
-import React from 'react'
+import React, { useMemo, useState } from 'react'
 import "./ProductDetail.css"
-import { ProductCard } from '../home/ProductCard'
-import { IoMdArrowDropdown } from "react-icons/io";
 import { useParams } from 'react-router-dom';
-
+import { SideBar } from './SideBar';
+import { ProductShower } from './ProductShower';
 // import { IoMdArrowDropup } from "react-icons/io"; use this arrow when the particular container is active
-export const ProductDetail = ({product}) => {
-  console.log("product",product)
+export const ProductDetail = ({product, handleAddToWishList, wishList}) => {
   const {categoryName} = useParams()
-  console.log("categoryName", categoryName)
-  const filteredProduct = product.filter((cate)=>cate.category.toLowerCase() === categoryName.toLowerCase());
- 
+  const [selectedProduct, setSelectedProduct] = useState([])
+  const [selectedColor, setSelectedColor] = useState([])
+  const [selectedBrand, setSelectedBrand] = useState([])
+  const [selectedOffer, setSelectedOffer] = useState([]);
+  const [lastOffer, setLastOffer] = useState("");
 
+  const filteredProduct = useMemo(() => {
+    return product.filter((cate) =>
+      (cate.category && cate.category.toLowerCase().includes(categoryName.toLowerCase())) ||
+      (cate.name && cate.name.toLowerCase().includes(categoryName.toLowerCase()))
+    );
+  }, [product, categoryName]);
+
+  const filterByBrands = useMemo(() =>{
+    if(selectedBrand.length === 0)return filteredProduct;
+    return filteredProduct.filter((pro)=>selectedBrand.includes(pro.brandName))
+  },[filteredProduct, selectedBrand])
+  
+  const discountPercent = (oldPrice, offerPrice)=>{
+    return Math.ceil(((oldPrice - offerPrice)/oldPrice)*100)
+  }
+  const filterByColor = useMemo(()=>{
+    if(selectedColor.length === 0)return filterByBrands;
+    return filterByBrands.filter((item)=>selectedColor.includes(item.color))
+  },[filterByBrands, selectedColor])
+
+  const filterByDiscount = useMemo(()=>{
+    if(selectedOffer.length === 0)return filterByColor;
+    return filterByColor.filter((item)=>discountPercent(item.oldPrice, item.offerPrice) <= selectedOffer)
+  },[filterByColor, selectedOffer])
+  
+  const filterCheckProduct = useMemo(()=>{
+    if(selectedProduct.length === 0){return filterByDiscount;}
+    return filterByDiscount.filter((pro)=> selectedProduct.includes(pro.name))
+  },[filterByDiscount, selectedProduct])
+
+  const handleRemove = (item)=>{
+    if(selectedBrand.includes(item)){
+      const updatedBrand = [...selectedBrand]
+      const index = updatedBrand.indexOf(item)
+      updatedBrand.splice(index,1)
+      setSelectedBrand(updatedBrand)
+    }else if(selectedProduct.includes(item)){
+      const updatedProduct = [...selectedProduct]
+      const index = updatedProduct.indexOf(item)
+      updatedProduct.splice(index,1)
+      setSelectedProduct(updatedProduct)
+    }
+  }
+  
+
+ 
   return (
     <main>
         <section className='topic-section'>
             <h2>Topic </h2>
-            <p> - 10 items</p>
+            <p> - {filterCheckProduct.length} items</p>
         </section>
        
         <section className='shower'>
-            <div className='sidebar'>
-              <div className='productNavs'>
-                <p>Filters</p>
-                <p>CLEAR ALL</p>
-              </div>
-              <div className='sidebar-items'>
-                  <div className='items categories'>
-                    <p>CATEGORIES</p>
-                      {filteredProduct.map((product)=>(
-                    <div className='item category'>
-                      <>
-                        <input type="checkbox" />
-                        <p>{product.name}</p>
-                      </>
-                    </div>
-                      ))}
-                  </div>
-                  <div className='items brand'>
-                    <p>BRANDS</p>
-                    {filteredProduct.map((product)=>(
-                      <div className='item brand'>
-                        <>
-                          <input type="checkbox" />
-                          <p>{product.brandName}</p>
-                        </>
-                      </div>
-                    ))}
-                  </div>
-                  <div className='items price'>
-                    <p>PRICE</p>
-                    <div className='item prices'>
-                      <input type="checkbox" />
-                      <p>Rs 100 to Rs 200 </p>
-                    </div>
-                  </div>
-                  <div className='items color'>
-                    <p>COLOR</p>
-                    <div className='item color'>
-                      <input type="checkbox" />
-                      <p>White</p>
-                    </div>
-                  </div>
-                  <div className='items discount'>
-                    <p>DISCOUNT</p>
-                    <div className='item discount '>
-                      <input type="checkbox" />
-                      <p>10% to 20% off</p>
-                    </div>
-                  </div>
-              </div>
-            </div>
-            <div className='productShower'>
-                <div className='productNav'>
-                  <div className='navGroups'>
-                    <p>Bundles <IoMdArrowDropdown /></p>
-                    <p>Country of orgin <IoMdArrowDropdown /></p>
-                    <p>Size <IoMdArrowDropdown /></p>
-                  </div>
-                  <div className='sortBy'>
-                    <p>sort by: <span>Popularity</span> <IoMdArrowDropdown /></p>
-                  </div>
-                </div>
-                <div className='product-container' >
-                    <ProductCard isProductDetail={true} category={filteredProduct} product={product}/>
-              </div>
-            </div>
+            <SideBar 
+            categoryName={categoryName}
+            selectedOffer={selectedOffer}
+            selectedBrand={selectedBrand}
+            selectedColor={selectedColor}
+            filterByBrands={filterByBrands}
+            selectedProduct={selectedProduct}
+            filteredProduct={filteredProduct}
+            setSelectedColor={setSelectedColor}
+            setSelectedBrand={setSelectedBrand}
+            setSelectedOffer={setSelectedOffer}
+            setSelectedProduct={setSelectedProduct}
+            />
+            <ProductShower 
+            handleAddToWishList={handleAddToWishList}
+            selectedBrand={selectedBrand}
+            handleRemove={handleRemove}
+            wishList={wishList}
+            filterCheckProduct={filterCheckProduct}
+            product={product}
+            />
         </section>
     </main>
   )

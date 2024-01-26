@@ -86,6 +86,113 @@
       "name": "sweatshirt",
       "offerPrice": 800,
       "oldPrice": 1300,
+      "color": "black",
+      "thumbImg": "https://img.freepik.com/free-photo/man-black-sweater-black-bucket-hat-youth-apparel-shoot_53876-102294.jpg?size=626&ext=jpg&ga=GA1.1.929801155.1698819302&semt=sph",
+      "description": "Pure Cotton Relaxed Fit Pullover Sweatshirt",
+      "images": [
+        {
+          "image": "https://img.freepik.com/free-photo/black-sweater-apparel-shoot-with-design-space_53876-102943.jpg?size=626&ext=jpg&ga=GA1.1.929801155.1698819302&semt=sph",
+          "alt": "f"
+        },
+        {
+          "image": "https://img.freepik.com/free-photo/man-black-sweater-black-bucket-hat-youth-apparel-shoot_53876-102294.jpg?size=626&ext=jpg&ga=GA1.1.929801155.1698819302&semt=sph",
+          "alt": "f"
+        },
+        {
+          "image": "https://img.freepik.com/premium-psd/men-with-turtleneck-sweater-mockup-with-gray-trousers_53876-98655.jpg?size=626&ext=jpg",
+          "alt": "f"
+        }
+      ],
+      "size": [
+        "s",
+        "m",
+        "l",
+        "xl",
+        "xxl"
+      ],
+      "productDetails": [
+        {
+          "product_material_detail": "Black solid relaxed fit sweatshirt has a round neck, 1 pocket, long sleeves, straight hem",
+          "size&fit": [
+            {
+              "title": "Relaxed Fit"
+            },
+            {
+              "title": "The model (height 6') is wearing a size M"
+            }
+          ],
+          "material&care": [
+            {
+              "title": "100% Cotton"
+            },
+            {
+              "title": "Machine Wash"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 13,
+      "brandName": "Calvin klein",
+      "category": "mens casual wear",
+      "name": "sweatshirt",
+      "offerPrice": 1500,
+      "oldPrice": 2300,
+      "color": "black",
+      "thumbImg": "https://img.freepik.com/free-photo/man-black-sweater-black-bucket-hat-youth-apparel-shoot_53876-102294.jpg?size=626&ext=jpg&ga=GA1.1.929801155.1698819302&semt=sph",
+      "description": "Pure Cotton & wooly Relaxed Fit Sweatshirt",
+      "images": [
+        {
+          "image": "https://img.freepik.com/free-photo/black-sweater-apparel-shoot-with-design-space_53876-102943.jpg?size=626&ext=jpg&ga=GA1.1.929801155.1698819302&semt=sph",
+          "alt": "f"
+        },
+        {
+          "image": "https://img.freepik.com/free-photo/man-black-sweater-black-bucket-hat-youth-apparel-shoot_53876-102294.jpg?size=626&ext=jpg&ga=GA1.1.929801155.1698819302&semt=sph",
+          "alt": "f"
+        },
+        {
+          "image": "https://img.freepik.com/premium-psd/men-with-turtleneck-sweater-mockup-with-gray-trousers_53876-98655.jpg?size=626&ext=jpg",
+          "alt": "f"
+        }
+      ],
+      "size": [
+        "s",
+        "m",
+        "l",
+        "xl",
+        "xxl"
+      ],
+      "productDetails": [
+        {
+          "product_material_detail": "Black solid relaxed fit sweatshirt has a round neck, 1 pocket, long sleeves, straight hem",
+          "size&fit": [
+            {
+              "title": "Relaxed Fit"
+            },
+            {
+              "title": "The model (height 6') is wearing a size M"
+            }
+          ],
+          "material&care": [
+            {
+              "title": "100% Cotton"
+            },
+            {
+              "title": "Machine Wash"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 12,
+      "brandName": "Bene Kleed",
+      "category": "mens casual wear",
+      "name": "turtle neck",
+      "offerPrice": 800,
+      "oldPrice": 1300,
+      "color": "black",
       "thumbImg": "https://img.freepik.com/free-photo/man-black-sweater-black-bucket-hat-youth-apparel-shoot_53876-102294.jpg?size=626&ext=jpg&ga=GA1.1.929801155.1698819302&semt=sph",
       "description": "Pure Cotton Relaxed Fit Pullover Sweatshirt",
       "images": [
@@ -136,6 +243,7 @@
       "category": "womens Ethnic wear",
       "name": "red kurta",
       "brandName": "SINGNI",
+      "color": "red",
       "thumbImg": "https://img.freepik.com/free-photo/young-woman-beautiful-red-dress_1303-17503.jpg?size=626&ext=jpg&ga=GA1.1.929801155.1698819302&semt=ais",
       "description": " Ethnic Motifs Embroidered Mirror Work Kurta with Trousers & Dupatta",
       "offerPrice": 1099,
@@ -200,6 +308,7 @@
       "category": "womens Ethnic wear",
       "name": "red kurta",
       "brandName": "SINGNI",
+      "color": "white",
       "thumbImg": "https://img.freepik.com/free-photo/young-woman-beautiful-red-dress_1303-17503.jpg?size=626&ext=jpg&ga=GA1.1.929801155.1698819302&semt=ais",
       "description": " Ethnic Motifs Embroidered Mirror Work Kurta with Trousers & Dupatta",
       "offerPrice": "1099",
@@ -267,6 +376,7 @@
       "description": "Pure Cotton Relaxed Fit Shirt",
       "offerPrice": "1099",
       "oldPrice": "1899",
+      "color": "blue",
       "thumbImg": "https://img.freepik.com/premium-photo/full-length-portrait-pensive-handsome-man-posing-with-hands-pockets-isolated-gray-wall_171337-83308.jpg?size=626&ext=jpg&ga=GA1.1.929801155.1698819302&semt=ais",
       "size": [
         "s",
@@ -314,6 +424,7 @@
       "category": "kids Wear",
       "offerPrice": "799",
       "oldPrice": "1199",
+      "color": "blue",
       "thumbImg": "https://img.freepik.com/free-photo/low-angle-little-boy-posing_23-2148445671.jpg?size=626&ext=jpg&ga=GA1.1.929801155.1698819302&semt=ais",
       "description": "Pure Cotton Relaxed Fit Pullover Sweatshirt",
       "size": [
@@ -365,6 +476,7 @@
       "offerPrice": "399",
       "oldPrice": "899",
       "gender": "male",
+      "color": "brown",
       "description": "Pure Cotton Relaxed Fit Pullover Sweatshirt",
       "size": [
         "s",
@@ -411,6 +523,7 @@
       "brandName": "vector",
       "category": "sports Wear",
       "name": "women sport wear",
+      "color": "brown",
       "thumbImg": "https://img.freepik.com/free-photo/strict-girl-glamour-salon-styling_1303-417.jpg?size=626&ext=jpg&ga=GA1.1.929801155.1698819302&semt=ais",
       "offerPrice": "399",
       "oldPrice": "899",
@@ -462,6 +575,7 @@
       "category": "watches",
       "offerPrice": "4000",
       "oldPrice": "6000",
+      "color": "brown",
       "thumbImg": "https://img.freepik.com/free-photo/rendering-smart-home-device_23-2151039301.jpg?size=626&ext=jpg&ga=GA1.1.929801155.1698819302&semt=sph",
       "description": "Apple watch series 8",
       "size": [
@@ -506,6 +620,7 @@
       "category": "watches",
       "offerPrice": "2500",
       "oldPrice": "4000",
+      "color": "brown",
       "thumbImg": "https://img.freepik.com/free-photo/stylish-golden-watch-white-surface_181624-27078.jpg?size=626&ext=jpg&ga=GA1.1.929801155.1698819302&semt=ais",
       "description": "Zapriyah watchi",
       "size": [
@@ -550,6 +665,7 @@
       "category": "womens footwear",
       "offerPrice": "4000",
       "oldPrice": "6000",
+      "color": "brown",
       "thumbImg": "https://img.freepik.com/free-photo/women-s-red-high-heel-shoes-formal-fashion_53876-101501.jpg?size=626&ext=jpg&ga=GA1.1.929801155.1698819302&semt=ais",
       "description": "Apple watch series 8",
       "size": [
@@ -599,6 +715,7 @@
       "category": "Grooming",
       "offerPrice": 300,
       "oldPrice": 400,
+      "color": "white",
       "thumbImg": "https://img.freepik.com/free-photo/fresh-scent-purple-flower-glass-bottle-generative-ai_188544-9642.jpg?size=626&ext=jpg&ga=GA1.1.929801155.1698819302&semt=sph",
       "description": "Apple watch series 8",
       "size": [
@@ -646,15 +763,319 @@
       "size": "l"
     },
     {
-      "id": {
-        "id": 1,
-        "productId": 2,
-        "quantity": 1,
-        "size": "l"
-      },
-      "productId": 4,
+      "id": 2,
+      "productId": 5,
       "quantity": 1,
-      "size": "s"
+      "size": "l"
+    },
+    {
+      "id": 4,
+      "productId": 1,
+      "quantity": 1,
+      "size": "l"
+    },
+    {
+      "id": 5,
+      "productId": 6,
+      "quantity": 1,
+      "size": "m"
+    }
+  ],
+  "hoverItems": [
+    {
+      "id": 1,
+      "brandName": "Bene Kleed",
+      "category": "Topwear",
+      "name": "T-shirts",
+      "offerPrice": 800,
+      "oldPrice": 1300,
+      "color": "black",
+      "thumbImg": "https://img.freepik.com/free-photo/man-black-sweater-black-bucket-hat-youth-apparel-shoot_53876-102294.jpg?size=626&ext=jpg&ga=GA1.1.929801155.1698819302&semt=sph",
+      "description": "Pure Cotton Relaxed Fit Pullover Sweatshirt",
+      "images": [
+        {
+          "image": "https://img.freepik.com/free-photo/black-sweater-apparel-shoot-with-design-space_53876-102943.jpg?size=626&ext=jpg&ga=GA1.1.929801155.1698819302&semt=sph",
+          "alt": "f"
+        },
+        {
+          "image": "https://img.freepik.com/free-photo/man-black-sweater-black-bucket-hat-youth-apparel-shoot_53876-102294.jpg?size=626&ext=jpg&ga=GA1.1.929801155.1698819302&semt=sph",
+          "alt": "f"
+        },
+        {
+          "image": "https://img.freepik.com/premium-psd/men-with-turtleneck-sweater-mockup-with-gray-trousers_53876-98655.jpg?size=626&ext=jpg",
+          "alt": "f"
+        }
+      ],
+      "size": [
+        "s",
+        "m",
+        "l",
+        "xl",
+        "xxl"
+      ],
+      "productDetails": [
+        {
+          "product_material_detail": "Black solid relaxed fit sweatshirt has a round neck, 1 pocket, long sleeves, straight hem",
+          "size&fit": [
+            {
+              "title": "Relaxed Fit"
+            },
+            {
+              "title": "The model (height 6') is wearing a size M"
+            }
+          ],
+          "material&care": [
+            {
+              "title": "100% Cotton"
+            },
+            {
+              "title": "Machine Wash"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "brandName": "bionic",
+      "category": "Topwear",
+      "name": "casual shirt",
+      "offerPrice": 800,
+      "oldPrice": 1300,
+      "color": "black",
+      "thumbImg": "https://img.freepik.com/free-photo/man-black-sweater-black-bucket-hat-youth-apparel-shoot_53876-102294.jpg?size=626&ext=jpg&ga=GA1.1.929801155.1698819302&semt=sph",
+      "description": "Pure Cotton Relaxed Fit Pullover Sweatshirt",
+      "images": [
+        {
+          "image": "https://img.freepik.com/free-photo/black-sweater-apparel-shoot-with-design-space_53876-102943.jpg?size=626&ext=jpg&ga=GA1.1.929801155.1698819302&semt=sph",
+          "alt": "f"
+        },
+        {
+          "image": "https://img.freepik.com/free-photo/man-black-sweater-black-bucket-hat-youth-apparel-shoot_53876-102294.jpg?size=626&ext=jpg&ga=GA1.1.929801155.1698819302&semt=sph",
+          "alt": "f"
+        },
+        {
+          "image": "https://img.freepik.com/premium-psd/men-with-turtleneck-sweater-mockup-with-gray-trousers_53876-98655.jpg?size=626&ext=jpg",
+          "alt": "f"
+        }
+      ],
+      "size": [
+        "s",
+        "m",
+        "l",
+        "xl",
+        "xxl"
+      ],
+      "productDetails": [
+        {
+          "product_material_detail": "Black solid relaxed fit sweatshirt has a round neck, 1 pocket, long sleeves, straight hem",
+          "size&fit": [
+            {
+              "title": "Relaxed Fit"
+            },
+            {
+              "title": "The model (height 6') is wearing a size M"
+            }
+          ],
+          "material&care": [
+            {
+              "title": "100% Cotton"
+            },
+            {
+              "title": "Machine Wash"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "brandName": "Kleed",
+      "category": "bottomwear",
+      "name": "Track pant",
+      "offerPrice": 800,
+      "oldPrice": 1300,
+      "color": "black",
+      "thumbImg": "https://img.freepik.com/free-photo/man-black-sweater-black-bucket-hat-youth-apparel-shoot_53876-102294.jpg?size=626&ext=jpg&ga=GA1.1.929801155.1698819302&semt=sph",
+      "description": "Pure Cotton Relaxed Fit Pullover Sweatshirt",
+      "images": [
+        {
+          "image": "https://img.freepik.com/free-photo/black-sweater-apparel-shoot-with-design-space_53876-102943.jpg?size=626&ext=jpg&ga=GA1.1.929801155.1698819302&semt=sph",
+          "alt": "f"
+        },
+        {
+          "image": "https://img.freepik.com/free-photo/man-black-sweater-black-bucket-hat-youth-apparel-shoot_53876-102294.jpg?size=626&ext=jpg&ga=GA1.1.929801155.1698819302&semt=sph",
+          "alt": "f"
+        },
+        {
+          "image": "https://img.freepik.com/premium-psd/men-with-turtleneck-sweater-mockup-with-gray-trousers_53876-98655.jpg?size=626&ext=jpg",
+          "alt": "f"
+        }
+      ],
+      "size": [
+        "s",
+        "m",
+        "l",
+        "xl",
+        "xxl"
+      ],
+      "productDetails": [
+        {
+          "product_material_detail": "Black solid relaxed fit sweatshirt has a round neck, 1 pocket, long sleeves, straight hem",
+          "size&fit": [
+            {
+              "title": "Relaxed Fit"
+            },
+            {
+              "title": "The model (height 6') is wearing a size M"
+            }
+          ],
+          "material&care": [
+            {
+              "title": "100% Cotton"
+            },
+            {
+              "title": "Machine Wash"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "brandName": "Bene Kleed",
+      "category": "bottomwear",
+      "name": "jean pant",
+      "offerPrice": 800,
+      "oldPrice": 1300,
+      "color": "black",
+      "thumbImg": "https://img.freepik.com/free-photo/man-black-sweater-black-bucket-hat-youth-apparel-shoot_53876-102294.jpg?size=626&ext=jpg&ga=GA1.1.929801155.1698819302&semt=sph",
+      "description": "Pure Cotton Relaxed Fit Pullover Sweatshirt",
+      "images": [
+        {
+          "image": "https://img.freepik.com/free-photo/black-sweater-apparel-shoot-with-design-space_53876-102943.jpg?size=626&ext=jpg&ga=GA1.1.929801155.1698819302&semt=sph",
+          "alt": "f"
+        },
+        {
+          "image": "https://img.freepik.com/free-photo/man-black-sweater-black-bucket-hat-youth-apparel-shoot_53876-102294.jpg?size=626&ext=jpg&ga=GA1.1.929801155.1698819302&semt=sph",
+          "alt": "f"
+        },
+        {
+          "image": "https://img.freepik.com/premium-psd/men-with-turtleneck-sweater-mockup-with-gray-trousers_53876-98655.jpg?size=626&ext=jpg",
+          "alt": "f"
+        }
+      ],
+      "size": [
+        "s",
+        "m",
+        "l",
+        "xl",
+        "xxl"
+      ],
+      "productDetails": [
+        {
+          "product_material_detail": "Black solid relaxed fit sweatshirt has a round neck, 1 pocket, long sleeves, straight hem",
+          "size&fit": [
+            {
+              "title": "Relaxed Fit"
+            },
+            {
+              "title": "The model (height 6') is wearing a size M"
+            }
+          ],
+          "material&care": [
+            {
+              "title": "100% Cotton"
+            },
+            {
+              "title": "Machine Wash"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "brandName": "Bene Kleed",
+      "category": "Topwear",
+      "name": "sweatshirt",
+      "offerPrice": 800,
+      "oldPrice": 1300,
+      "color": "black",
+      "thumbImg": "https://img.freepik.com/free-photo/man-black-sweater-black-bucket-hat-youth-apparel-shoot_53876-102294.jpg?size=626&ext=jpg&ga=GA1.1.929801155.1698819302&semt=sph",
+      "description": "Pure Cotton Relaxed Fit Pullover Sweatshirt",
+      "images": [
+        {
+          "image": "https://img.freepik.com/free-photo/black-sweater-apparel-shoot-with-design-space_53876-102943.jpg?size=626&ext=jpg&ga=GA1.1.929801155.1698819302&semt=sph",
+          "alt": "f"
+        },
+        {
+          "image": "https://img.freepik.com/free-photo/man-black-sweater-black-bucket-hat-youth-apparel-shoot_53876-102294.jpg?size=626&ext=jpg&ga=GA1.1.929801155.1698819302&semt=sph",
+          "alt": "f"
+        },
+        {
+          "image": "https://img.freepik.com/premium-psd/men-with-turtleneck-sweater-mockup-with-gray-trousers_53876-98655.jpg?size=626&ext=jpg",
+          "alt": "f"
+        }
+      ],
+      "size": [
+        "s",
+        "m",
+        "l",
+        "xl",
+        "xxl"
+      ],
+      "productDetails": [
+        {
+          "product_material_detail": "Black solid relaxed fit sweatshirt has a round neck, 1 pocket, long sleeves, straight hem",
+          "size&fit": [
+            {
+              "title": "Relaxed Fit"
+            },
+            {
+              "title": "The model (height 6') is wearing a size M"
+            }
+          ],
+          "material&care": [
+            {
+              "title": "100% Cotton"
+            },
+            {
+              "title": "Machine Wash"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "wishlist": [
+    {
+      "id": 1,
+      "productId": 1
+    },
+    {
+      "id": 2,
+      "productId": 2
+    },
+    {
+      "id": 3,
+      "productId": 2
+    },
+    {
+      "id": 4,
+      "productId": 2
+    },
+    {
+      "id": 5,
+      "productId": 2
+    },
+    {
+      "id": 6,
+      "productId": 2
+    },
+    {
+      "id": 7,
+      "productId": 2
     }
   ]
 }

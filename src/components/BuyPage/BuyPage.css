@@ -1,5 +1,9 @@
+@font-face {
+    font-family: "Assitant";
+    src: url('https://fonts.googleapis.com/css2?family=Assistant:wght@200;400;600;700&family=Roboto:ital,wght@1,100&display=swap');
+}
 *{
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: "Assitant";
 }
 .buy-Page{
     display: flex;
@@ -15,15 +19,17 @@
 .imgSection{
     display: grid;
     gap: 15px;
-    grid-template-columns:repeat(2,auto) ;
-}
-.imgSection{
     width: auto;
     height: 550px;
+    grid-template-columns:repeat(2,auto) ;
 }
 .imgSection img{
     width:411px;
     height: 550px;
+    transition: .3s ease-in-out;
+}
+.imgSection img:hover{
+    transform: scale(1.01);
 }
 .detailSection{
     width: 100%;
@@ -34,9 +40,7 @@
     padding-bottom: 10px;
 }
 
-.productName h2{
-    font-family: 'Courier New', Courier, monospace;
-}
+
 .productName p{
     padding-top: 5px;
 }
@@ -78,6 +82,11 @@
     display: flex;
     flex-direction: row;
 }
+.size .size-not-active{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 .size p{
     display: flex;
     align-items: center;
@@ -105,6 +114,10 @@
 }
 .price-size-buttons .bag-icon{
     width: 150px;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
     height: 60px;
     border: none;
     border-radius: 30px;
@@ -114,9 +127,9 @@
     transition: .5s ease-in-out;
 }
 .bag-icon:hover{
-    background-color: gray;
+    background-color: white;
     color: red;
-    font-weight: 900;
+    border: 1px solid red;
 }
 .price-size-buttons .heart-icon{
     width: 100px;
@@ -250,22 +263,31 @@ hr{
 .detail p{
     padding: 5px 0px 5px 0px;
 }
+
 .active{
+    color: red;
     display: flex;
     align-items: center;
     justify-content: center;
     width: 50px;
+    border-color: reds;
     height: 50px;
     margin-right: 20px;
-    border: 1px solid red;
-    color: red;
-    border-radius: 50%;
     padding-bottom: 0;
     font-size: 25px;
     cursor: pointer;
 }
 .similar-title{
     margin-bottom: 15px;
+}
+.heart-icon-active{
+    background-color: #535766;
+    text-align: center;
+    width: 180px;
+    border-radius: 12px;
+    border: none;
+    color: white;
+    font-size: 20px;
 }
 
 

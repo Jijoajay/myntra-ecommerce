@@ -7,6 +7,8 @@ import { BuyPage } from './components/BuyPage/BuyPage';
 import { Bag } from './components/Bag/Bag';
 import { useEffect, useState } from 'react';
 import fetch from './api/fetch';
+import { Login } from './components/Login/Login';
+import { Wishlists } from './components/Wislist/Wishlists';
 function App() {
   const [carousel, setCarousel] = useState([])
   const [category, setCategory] = useState([])
@@ -14,7 +16,7 @@ function App() {
   const [bagProduct, setBagProduct] = useState([])
   const [pinCode, setPinCode] = useState(null)
   const [gotPin, setGotPin] = useState(null)
-
+  const [wishList, setWishList] = useState([])
   useEffect(()=>{
     const fetchCarouselData = async()=>{
       try {
@@ -55,23 +57,69 @@ function App() {
       }
     }
     fetchBagData();
+
+    
   },[])
+  const handleAddToWishList = async(product_id)=>{
+    try {
+      const wishListId = wishList.length ? wishList.length + 1 : 1
+      const newItem = {
+        id:wishListId,
+        productId:product_id
+      }
+      const reponse = await fetch.post('/wishlist',newItem)
+      setWishList([...wishList, newItem])
+    } catch (error) {
+      console.error(error.message)
+    }
+  }
+  const handleRemoveFromWishList = async(product_id)=>{
+    try {
+      console.log(product_id)
+      const response = await fetch.delete(`/wishlist/${product_id}`)
+      console.log(response.data)
+      setWishList(wishList.filter((list)=>list.productId !== product_id))
+    } catch (error) {
+      console.log(error)
+    }
+  }
+  useEffect(()=>{
+    const fetchWishListData = async() =>{
+      try {
+        const response = await fetch.get('/wishlist')
+        setWishList(response.data)
+      } catch (error) {
+        console.log(error)
+      }
+    }
+    fetchWishListData();
+  },[])
+
+  
   
   return (
     <div className="App">
       <Navbar />
       <Routes>
         <Route path='/' element={<Home carousel={carousel} category={category}/>} />
-        <Route path='/product/:categoryName'element={<ProductDetail category={category} product={product} />}/>
-        <Route path='/buyProduct/:id'element={<BuyPage 
-        category={category}
+        <Route path='/login' element={<Login />} />
+        <Route path='/product/:categoryName'element={<ProductDetail 
         product={product} 
-        bagProduct={bagProduct} 
-        setBagProduct={setBagProduct}
-        pinCode={pinCode}
-        setPinCode={setPinCode}
+        category={category}
+        wishList={wishList}
+        handleAddToWishList={handleAddToWishList} 
+        />}/>
+        <Route path='/buyProduct/:id'element={<BuyPage 
         gotPin={gotPin}
+        pinCode={pinCode}
+        product={product} 
+        category={category}
+        wishList={wishList}
         setGotPin={setGotPin}
+        bagProduct={bagProduct} 
+        setPinCode={setPinCode}
+        setBagProduct={setBagProduct}
+        handleAddToWishList={handleAddToWishList} 
         />}/>
         <Route path='/checkout'element={<Bag 
         pinCode={pinCode}
@@ -80,6 +128,13 @@ function App() {
         setGotPin={setGotPin}
         product={product}
         bagProduct={bagProduct} 
+        setBagProduct={setBagProduct} 
+        />}/>
+        <Route path='/wishlist' element={<Wishlists 
+        product={product}
+        wishList={wishList}
+        handleAddToWishList={handleAddToWishList}
+        handleRemoveFromWishList={handleRemoveFromWishList}
         />}/>
       </Routes>
     </div>

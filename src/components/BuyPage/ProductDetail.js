@@ -17,23 +17,17 @@ export const ProductDetail = ({selectedRating, handleRatingChange,product}) => {
                     <h3>PRODUCT DETAIL</h3>
                     <p> <CiViewList size={20}/></p>
                 </div>
-                <p>{det.product_material_detail}</p>
-                <div className='Size-Fit'>
-                    <h3>Size & Fit</h3>
-                    <div>
-                        {det["size&fit"].map((siz, index)=>{
-                            <p key={index}>{siz.title}</p>
-                        })}
+                {Object.entries(det).map(([detailKey, detailValue])=>(
+                    <div key={detailKey} className='Size-Fit'>
+                        <h3>{detailKey}</h3>
+                        {Array.isArray(detailValue)
+                            ? detailValue.map((value, index) => (
+                                <p key={index}>{value.title}</p>
+                            ))
+                            : <p>{detailValue}</p>
+                        }
                     </div>
-                </div>
-                <div className='Size-Fit'>
-                    <h3>Material & Care</h3>
-                    <div>
-                        {det["material&care"].map((mat,id)=>(
-                            <p key={id}>{mat.title}</p>
-                        ))}
-                    </div>
-                    </div>
+                ))}
                 </>
             ))}
         </div>
