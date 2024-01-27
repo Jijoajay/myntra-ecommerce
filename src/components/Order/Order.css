@@ -1,0 +1,319 @@
+.profile-overview-page{
+    height: 100vh;
+    margin: 100px 0px 100px 0px;
+    align-items: start;
+}
+.profile-overview-page h3{
+    font-size: 14px;
+}
+.profile-overview-page p{
+    font-size: 14px;
+}
+.order-page{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    margin-left: 200px;
+    padding-bottom: 100px;
+}
+.topbar{
+    width: 830px;
+    border-bottom: .1px solid black;
+    padding-bottom: 10px;
+}
+.main-content{
+    display: flex;
+    gap: 20px;
+}
+.main-content-section{
+    padding: 10px;
+}
+.sidebar-sidebar{
+    width: 120px;
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+    padding: 15px 5px 5px 5px;
+    border-right: .1px solid black;
+}
+.sidebar-sidebar .side{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.sidebar-sidebar .side-link{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+
+}
+.side-link p:hover{
+    font-weight: 700;
+}
+.main-segment{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+.img-cont{
+    display: flex;
+    justify-content: space-between;
+    padding: 30px;
+    width: 680px;
+    height: 180px;
+    background-color: lightgray;
+}
+.img-cont img{
+    height: 130px;
+    width: 130px;
+}
+.img-cont p{
+    border: .2px solid black;
+    background-color: white ;
+    height: 30px;
+    padding: 10px;
+    font-size: 12px;
+    cursor: pointer;
+}
+.order-boxes{
+    display: grid;
+    grid-template-columns: repeat(3,auto);
+    gap: 15px;
+}
+.box{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: .1px solid black;
+    width: 215px;
+    height: 215px;
+    padding: 20px;
+    cursor: pointer;
+}
+.box:hover{
+    background-color: rgb(250, 247, 247);
+}
+.box p{
+    font-size: 12px;
+}
+.order-page hr{
+    width: 65%;
+}
+.order-return-page{
+    display: flex;
+    gap: 30px;
+    flex-direction: column;
+}
+.order-return{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 675px;
+}
+.search-filter{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+.order-return-item-container{
+    background-color: lightgray;
+    height: 270px;
+    padding: 20px;
+}
+
+.order-return-product{
+    margin: 15px 15px 2px 15px;
+    padding: 15px;
+    background-color: lightgrey;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: .4s all;
+}
+.order-return-product:hover{
+    background-color: gray;
+}
+.img-content{
+    display: flex;
+    gap: 10px;
+}
+
+.order-return-items{
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    height: 100%;
+}
+.order-message{
+    margin:20px 0px 0px 30px;
+}
+.img-content img{
+    width:53px;
+    height: 70px;
+}
+.order-return-exchange{
+    height: 35px;
+    display: flex;
+    align-items: center;
+    background-color: lightgray;
+    padding: 5px;
+    padding-left: 20px;
+    margin: 0px 15px 0px 15px;
+}
+
+.review-cont{
+    display: flex;
+    background-color: lightgray;
+    margin: 0px 15px 0px 15px;
+    gap: 10px;
+    padding-left: 20px;
+    align-items: center;
+    height: 35px;
+    margin-top: 2px;
+
+}
+.review-star{
+    display: flex;
+    gap: 5px;
+}
+.coupon-container{
+    display: flex;
+    flex-direction: column;
+    width: 670px;
+    gap: 8px;
+    height: 140px;
+    padding: 20px 20px 20px 30px;
+    box-shadow:0px 0px 2px 0px rgba(0, 0, 0, 0.3);
+}
+.coupon-section{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.offer-code{
+    display: flex;
+    gap: 50px;
+    align-items: center;
+    height: 80px;
+}
+.coupon-offer{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    color: #14cda8;
+}
+.coupon-code{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.expiry-detail{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.coupon-expiry-date{
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+.coupon-detail{
+    color: Blue;
+}
+.profile-container{
+    border: .2px solid black;
+    width: 670px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    padding: 80px 20px 20px 20px;
+}
+.profile-container table{
+    border-collapse: separate;
+    border-spacing: 25px;
+}
+.address-section{
+    margin: 20px;
+    width: 600px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.add-address{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.add-address h3{
+    border: .1px solid black;
+    padding: 15px 10px 15px 10px;
+    border-radius: 12px;
+    color: blue;
+    cursor: pointer;
+}
+.address-shower{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.address-container{
+    height: 200px;
+    box-shadow:0px 0px 2px 0px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    transition: .3s ease-in-out;
+}
+.address-container:hover{
+    box-shadow:0px 0px 10px 0px rgba(0, 0, 0, 0.3);
+}
+.main-address{
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+    gap: 10px;
+    cursor:auto;
+}
+.address-holder{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.address-place{
+    border-radius: 20px;
+    width: auto;
+    padding: 10px;
+    background-color: lightgray;
+}
+.edit-remove{
+    display: flex;
+    margin-bottom: 0px;
+    border-top: .1px solid black;
+    height: 40px;
+}
+.edit-remove .button{
+    width: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    color: blue;
+    font-weight: 900;
+    cursor: pointer;
+}
+.edit-remove .edit{
+    border-right: .1px solid black;
+    height: 100%;
+}
+
+
+
+
+
+
+

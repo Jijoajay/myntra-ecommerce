@@ -9,6 +9,7 @@ import { useEffect, useState } from 'react';
 import fetch from './api/fetch';
 import { Login } from './components/Login/Login';
 import { Wishlists } from './components/Wislist/Wishlists';
+import { Order } from './components/Order/Order';
 function App() {
   const [carousel, setCarousel] = useState([])
   const [category, setCategory] = useState([])
@@ -136,6 +137,9 @@ function App() {
         handleAddToWishList={handleAddToWishList}
         handleRemoveFromWishList={handleRemoveFromWishList}
         />}/>
+        <Route path="/profile"
+        element={<Order />}
+        />
       </Routes>
     </div>
   );
