@@ -3,7 +3,7 @@ import "./ProductDetail.css"
 import { useParams } from 'react-router-dom';
 import { SideBar } from './SideBar';
 import { ProductShower } from './ProductShower';
-// import { IoMdArrowDropup } from "react-icons/io"; use this arrow when the particular container is active
+
 export const ProductDetail = ({product, handleAddToWishList, wishList}) => {
   const {categoryName} = useParams()
   const [selectedProduct, setSelectedProduct] = useState([])

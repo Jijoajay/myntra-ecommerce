@@ -12,8 +12,8 @@ export const OrderReturn = () => {
                 <p>from anything</p>
             </div>
             <div className='search-filter'>
-                <input type="search"  placeholder='Search in Orders'/>
-                <div>
+                <input type="search"  placeholder='Search in Orders' className='search'/>
+                <div className='filter'>
                     <p><FaFilter /></p>
                     <p>FILTER</p>
                 </div>

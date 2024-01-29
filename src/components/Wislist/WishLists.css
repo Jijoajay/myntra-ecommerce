@@ -1,13 +1,12 @@
 .wishList-container{
     display: flex;
-    flex-direction: column;
     margin: 50px 50px 0px 50px;
     gap: 50px;
 }
 .wislist-products{
     display: flex;
-    gap: 20px;
     flex-direction: column;
+    gap: 20px;
 }
 .wishlist-img img{
     width: 220px;

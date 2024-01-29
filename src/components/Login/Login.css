@@ -96,4 +96,10 @@
     transition: .3s all;
     pointer-events: none;
 }
+.visually-hidden{
+ margin: 0px;
+ padding: 0px;
+ height: 0px;
+ width: 0px;  
+}
 

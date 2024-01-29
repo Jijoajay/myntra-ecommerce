@@ -37,6 +37,7 @@
     padding: 15px 5px 5px 5px;
     border-right: .1px solid black;
 }
+
 .sidebar-sidebar .side{
     display: flex;
     flex-direction: column;
@@ -47,8 +48,14 @@
     flex-direction: column;
     gap: 5px;
     cursor: pointer;
-
+    
 }
+.sidebar-active{
+    color: #14cda8;
+    font-weight: 600;
+    text-decoration: none;
+}
+
 .side-link p:hover{
     font-weight: 700;
 }
@@ -117,6 +124,18 @@
     display: flex;
     gap: 20px;
     align-items: center;
+}
+.search{
+    width: 270px;
+    height: 35px;
+    padding: 15px;
+}
+.filter{
+    display: flex;
+    gap: 8px;
+    border: .2px solid black;
+    padding: 10px;
+    cursor: pointer;
 }
 .order-return-item-container{
     background-color: lightgray;
@@ -231,11 +250,62 @@
     flex-direction: column;
     align-items: center;
     justify-content: start;
-    padding: 80px 20px 20px 20px;
+    padding: 60px 20px 20px 20px;
+}
+.profile-container .edit-profile-form{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.edit{
+    margin-bottom: 10px;
+}
+
+.profile-floating-placeholder{
+    position: relative;
+    top: 23px;
+    left: 15px;
+    background-color: white;
+    width: max-content;
+    margin: 0;
+    padding: 0;
+}
+
+
+.edit-profile-form .mobile-input{
+    height: 70px;
+    padding-left: 15px;
+}
+.edit-profile-form .buttons {
+    border: .2px solid black;
+}
+.edit-profile-form .buttons button{
+    color: black;
+    background-color: white;
+}
+.buttons .female-but{
+    border-left: .2px solid black;
+}
+.edit-profile-form input{
+    height: 40px;
+    padding-left: 15px;
+}
+.edit-profile-form .submit-but{
+    width: 600px;
 }
 .profile-container table{
     border-collapse: separate;
     border-spacing: 25px;
+}
+.profile-container button{
+    width: 300px;
+    height: 40px;
+    background-color: #FF3F6C;
+    border: none;
+    border-radius: 2px;
+    color: white;
+    font-weight: 400;
+    cursor: pointer;
 }
 .address-section{
     margin: 20px;
@@ -275,7 +345,7 @@
 .main-address{
     display: flex;
     flex-direction: column;
-    padding: 15px;
+    padding: 15px 25px 15px 25px;
     gap: 10px;
     cursor:auto;
 }
@@ -309,6 +379,81 @@
 .edit-remove .edit{
     border-right: .1px solid black;
     height: 100%;
+}
+.add-edit-form{
+    position: absolute;
+    top: 20%;
+    left: 35%;
+    background-color: lightblue;
+    height: 450px;
+    width: 450px;
+    overflow-y: scroll;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    z-index: 10;
+}
+.add-edit-form h3{
+    margin-bottom: 30px;
+}
+.add-edit-input{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.add-edit-input input{
+    height: 35px;
+    padding-left:15px;
+}
+.pincode-state{
+    display: flex;
+    gap: 20px;
+}
+.pincode-state input{
+    width: 200px;
+}
+.address-type{
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+}
+.address-type .type{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.address-type .type div{
+    display: flex;
+    gap: 5px;
+    align-items: center;
+}
+.default{
+    display: flex;
+    gap:  8px;
+    align-items: center;
+}
+.cancel-save{
+    position: absolute;
+    top: 77.7%;
+    left: 35%;
+    z-index: 10;
+}
+.cancel-save .button{
+    width: 225px;
+    height: 50px;
+}
+.cancel{
+    background-color: white;
+    color: #535766;
+    font-weight: 500;
+    border: .1px solid #535766;
+}
+.save{
+    background-color: #BFC0C6;
+    color: white;
+    border: none;
 }
 
 

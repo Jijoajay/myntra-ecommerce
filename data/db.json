@@ -1056,26 +1056,50 @@
     {
       "id": 2,
       "productId": 2
+    }
+  ],
+  "userAddress": [
+    {
+      "id": 1,
+      "address": {
+        "name": "ajay",
+        "mobile": "324343434",
+        "pincode": "629001",
+        "state": "Tamilnadu",
+        "address": "LATHA NIWAS, THIRUVALLUR STREET ",
+        "town": "Nagercoil",
+        "district": "KANYAKUMARI",
+        "addressType": "",
+        "isDefault": false
+      }
     },
     {
-      "id": 3,
-      "productId": 2
-    },
+      "id": 2,
+      "address": {
+        "name": "akash",
+        "mobile": "424244",
+        "pincode": "629003",
+        "state": "Tamilnadu",
+        "address": "south street, manish nager",
+        "town": "Sucindrum",
+        "district": "Kanyakumari",
+        "addressType": "Home",
+        "isDefault": true
+      }
+    }
+  ],
+  "userInfo": [
     {
-      "id": 4,
-      "productId": 2
-    },
-    {
-      "id": 5,
-      "productId": 2
-    },
-    {
-      "id": 6,
-      "productId": 2
-    },
-    {
-      "id": 7,
-      "productId": 2
+      "id": 2,
+      "profile": {
+        "fullName": "ajay jijo",
+        "email": "jijoajay45@gmail.com",
+        "gender": "male",
+        "phoneNumber": "6379611161",
+        "birthday": "22/11/2002",
+        "alternateMobileNo": "9500995421",
+        "hintName": "Leo-Shino"
+      }
     }
   ]
 }

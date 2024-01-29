@@ -3,18 +3,20 @@ import "./Login.css"
 import { LoginByEmail } from './LoginByEmail'
 import { LoginByOtp } from './LoginByOtp'
 import { LoginInterface } from './LoginInterface'
+import {useNavigate } from 'react-router-dom'
 
-export const Login = () => {
-    const otpInputRef = useRef([...Array(4)].map(()=>React.createRef()))
-    const [otp, setOtp] = useState(new Array(4).fill(""))
-    const [phNo, setPhNo] = useState(null)
-    const [isContinue, setIsContinue] = useState(false)
-    const [error, setError] = useState(false)
-    const [contWithPassword, setContWithPassword] = useState(false);
-    const [placeholder, setPlaceholder] = useState("")
-    const [Passplaceholder, setPassPlaceholder] = useState("")
+export const Login = ({phNo, setPhNo, setIsAuthenticate}) => {
+    const verifyNumber = "3455"
+    const navigate = useNavigate()
     const [count, setCount] = useState(30)
-
+    const [error, setError] = useState(false)
+    const [placeholder, setPlaceholder] = useState("")
+    const [isContinue, setIsContinue] = useState(false)
+    const [otp, setOtp] = useState(new Array(4).fill(""))
+    const [Passplaceholder, setPassPlaceholder] = useState("")
+    const [contWithPassword, setContWithPassword] = useState(false);
+    const otpInputRef = useRef([...Array(4)].map(()=>React.createRef()))
+    
     const handlePlaceHolder = (item)=>{
         if(item === "password"){
             setPassPlaceholder(item)
@@ -34,6 +36,7 @@ export const Login = () => {
         if(phNo.length !== 10 ){
             setError(true)
         }else{
+            alert("your otp number is 3455")
             setIsContinue(!isContinue)
         }
     }
@@ -52,6 +55,7 @@ export const Login = () => {
         newOtp[index] = value;
         setOtp(newOtp);
     };
+
     const handleKeyChange = (e,index)=>{
         if(e.key === "Backspace" && !e.target.value && index > 0){
             otpInputRef.current[index - 1].current.focus()
@@ -59,10 +63,25 @@ export const Login = () => {
             otpInputRef.current[index + 1].current.focus()
         }
     }
+
     const handleResendOtp = ()=>{
         console.log("sending otp to the user")
         setIsContinue(true)
         setCount(30);
+    }
+     
+    const handleSubmit = ()=>{
+        if(otp.length === 4){
+            if(otp.join("") === verifyNumber){
+                localStorage.setItem("phoneNumber", phNo)
+                setIsAuthenticate(true)
+                navigate('/')
+            }else{
+                alert("please provide the correct otp")
+            }
+        }else{
+            alert("please fill out all the boxes")
+        }
     }
     
   return (
@@ -89,6 +108,7 @@ export const Login = () => {
                             setCount={setCount}
                             isContinue = {isContinue}
                             otpInputRef={otpInputRef}
+                            handleSubmit={handleSubmit}
                             handleKeyChange={handleKeyChange}
                             handleOtpChange={handleOtpChange}
                             handleResendOtp={handleResendOtp}

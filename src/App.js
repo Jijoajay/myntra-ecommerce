@@ -14,9 +14,11 @@ function App() {
   const [carousel, setCarousel] = useState([])
   const [category, setCategory] = useState([])
   const [product, setProduct] = useState([])
+  const [phNo, setPhNo] = useState(null)
   const [bagProduct, setBagProduct] = useState([])
   const [pinCode, setPinCode] = useState(null)
   const [gotPin, setGotPin] = useState(null)
+  const [isAuthenticate, setIsAuthenticate] = useState(false)
   const [wishList, setWishList] = useState([])
   useEffect(()=>{
     const fetchCarouselData = async()=>{
@@ -94,16 +96,40 @@ function App() {
       }
     }
     fetchWishListData();
+  },[setIsAuthenticate])
+  useEffect(()=>{
+    const authenticateUser = ()=>{
+      const phoneNumber = localStorage.getItem("phoneNumber")
+      if(phoneNumber){
+        setIsAuthenticate(true)
+      }else{
+        setIsAuthenticate(false)
+      }
+    }
+    authenticateUser();
   },[])
+
+  const handleLogout = ()=>{
+    setIsAuthenticate(false)
+    localStorage.removeItem('phoneNumber')
+  }
 
   
   
   return (
     <div className="App">
-      <Navbar />
+      <Navbar 
+      phNo={phNo}
+      isAuthenticate = {isAuthenticate}
+      handleLogout={handleLogout}
+      />
       <Routes>
         <Route path='/' element={<Home carousel={carousel} category={category}/>} />
-        <Route path='/login' element={<Login />} />
+        <Route path='/login' element={<Login 
+        phNo={phNo}
+        setPhNo={setPhNo}
+        setIsAuthenticate={setIsAuthenticate}
+        />} />
         <Route path='/product/:categoryName'element={<ProductDetail 
         product={product} 
         category={category}
@@ -137,9 +163,13 @@ function App() {
         handleAddToWishList={handleAddToWishList}
         handleRemoveFromWishList={handleRemoveFromWishList}
         />}/>
-        <Route path="/profile"
-        element={<Order />}
-        />
+        <Route path='/my/profile' element={<Order comp={"profile"}/>} />
+        <Route path="/my/dashboard" element={<Order comp={"overview"}/>} />
+        <Route path='/my/order-return' element={<Order comp={"order-return"}/>} />
+        <Route path='/my/coupons' element={<Order comp={"coupons"}/>} />
+        <Route path='/my/address' element={<Order comp={"address"}/>} />
+        <Route path='/my/editprofile' element={<Order comp={"editprofile"}/>} />
+
       </Routes>
     </div>
   );

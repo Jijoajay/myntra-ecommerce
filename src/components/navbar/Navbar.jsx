@@ -6,9 +6,8 @@ import "./navbar.css"
 import {Link} from "react-router-dom";
 import { ProfileHover } from './ProfileHover';
 import { ProductHover } from './ProductHover';
-export const Navbar = () => {
+export const Navbar = ({isAuthenticate ,phNo,handleLogout}) => {
     const [hoveredItem, setHoveredItems] = useState(null)
-    const [isHovered, setIsHovered] = useState(false)
     const handleMouseEnter = (item)=>{
         setHoveredItems(item)
     }
@@ -51,7 +50,11 @@ export const Navbar = () => {
                     {hoveredItem === "profile" && 
                         <>
                             <div className='hover-container' onMouseEnter={()=>handleMouseEnter("profile")} onMouseLeave={handleMouseLeave}>
-                                <ProfileHover />
+                                <ProfileHover 
+                                isAuthenticate={isAuthenticate}
+                                handleLogout={handleLogout}
+                                phNo={phNo}
+                                />
                             </div>
                         </>
                     }
