@@ -1,9 +1,10 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import "./WishLists.css"
 import { RxCross1 } from "react-icons/rx";
+import { DataContext } from '../../context/DataContext';
 
-export const Wishlists = ({wishList, 
-handleRemoveFromWishList,product}) => {
+export const Wishlists = () => {
+    const {wishList, handleRemoveFromWishList,product} = useContext(DataContext)
     const productId = wishList.map((list)=> list.productId)
     const filteredWishListItem = product.filter((item)=>productId.includes(item.id))
   return (

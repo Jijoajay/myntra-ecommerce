@@ -1,10 +1,12 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import "./Home.css"
 import { Carousel } from '../navbar/Carousel'
 import { ProductCard } from './ProductCard'
 import { CollectiveCarousel } from './CollectiveCarousel'
+import { DataContext } from '../../context/DataContext'
 
-export const Home = ({carousel, category, carouselBase}) => {
+export const Home = () => {
+    const {carousel, category, carouselBase} = useContext(DataContext)
   return (
     <main className='homePage' unselectable='on'>
         <section>

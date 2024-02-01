@@ -3,8 +3,10 @@ import "./ProductDetail.css"
 import { useParams } from 'react-router-dom';
 import { SideBar } from './SideBar';
 import { ProductShower } from './ProductShower';
+import { useContext } from 'react';
+import { DataContext } from '../../context/DataContext';
 
-export const ProductDetail = ({product, handleAddToWishList, wishList}) => {
+export const ProductDetail = () => {
   const {categoryName} = useParams()
   const [lastOffer, setLastOffer] = useState("");
   const [selectedColor, setSelectedColor] = useState([])
@@ -12,7 +14,7 @@ export const ProductDetail = ({product, handleAddToWishList, wishList}) => {
   const [selectedOffer, setSelectedOffer] = useState([]);
   const [selectedProduct, setSelectedProduct] = useState([])
   const [dropDownContent, setDropDownContent] = useState("Recommended")
-
+  const {product, handleAddToWishList, wishList} = useContext(DataContext)
   const handleClickClearAll = ()=>{
     setSelectedBrand([])
     setSelectedColor([])

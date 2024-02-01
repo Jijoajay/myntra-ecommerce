@@ -1,4 +1,4 @@
-import React,{useState} from 'react'
+import React,{useContext, useState} from 'react'
 import { FaUser } from 'react-icons/fa';
 import { IoIosHeart } from 'react-icons/io';
 import { FaShoppingBag } from 'react-icons/fa';
@@ -7,8 +7,10 @@ import {Link, useNavigate} from "react-router-dom";
 import { ProfileHover } from './ProfileHover';
 import { ProductHover } from './ProductHover';
 import { IoIosSearch } from "react-icons/io";
+import {DataContext} from "../../context/DataContext"
 
-export const Navbar = ({isAuthenticate ,phNo,handleLogout, product, search, setSearch}) => {
+export const Navbar = () => {
+    const {isAuthenticate ,phNo,handleLogout, product, search, setSearch} = useContext(DataContext)
     const [hoveredItem, setHoveredItems] = useState(null)
     const navigate = useNavigate()
     const handleMouseEnter = (item)=>{

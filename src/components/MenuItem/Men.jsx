@@ -1,9 +1,11 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { Carousel } from '../navbar/Carousel'
 import {BrandProductCard} from "./BrandProductCard"
 import "./Men.css"
+import { DataContext } from '../../context/DataContext'
 
-export const Men = ({carousel,women, category}) => {
+export const Men = ({women}) => {
+    const {carousel,category} = useContext(DataContext)
   return (
     <main className='men-page'>
         <Carousel carousel={carousel}/>

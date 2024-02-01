@@ -1,11 +1,12 @@
-import React, {useState, useRef} from 'react'
+import React, {useState, useRef, useContext} from 'react'
 import "./Login.css"
 import { LoginByEmail } from './LoginByEmail'
 import { LoginByOtp } from './LoginByOtp'
 import { LoginInterface } from './LoginInterface'
 import {useNavigate } from 'react-router-dom'
+import { DataContext } from '../../context/DataContext'
 
-export const Login = ({phNo, setPhNo, setIsAuthenticate}) => {
+export const Login = () => {
     const verifyNumber = "3455"
     const navigate = useNavigate()
     const [count, setCount] = useState(30)
@@ -15,6 +16,7 @@ export const Login = ({phNo, setPhNo, setIsAuthenticate}) => {
     const [otp, setOtp] = useState(new Array(4).fill(""))
     const [Passplaceholder, setPassPlaceholder] = useState("")
     const [contWithPassword, setContWithPassword] = useState(false);
+    const {phNo, setPhNo, setIsAuthenticate} = useContext(DataContext)
     const otpInputRef = useRef([...Array(4)].map(()=>React.createRef()))
     
     const handlePlaceHolder = (item)=>{

@@ -1,16 +1,18 @@
-import React,{useEffect, useState} from 'react'
+import React,{useContext, useEffect, useState} from 'react'
 import { BiSolidOffer } from "react-icons/bi";
 import { IoReturnDownBackOutline } from "react-icons/io5";
 import { TiTick } from "react-icons/ti";
 import { BiSolidCoupon } from "react-icons/bi";
 import { RxCross1 } from "react-icons/rx";
 import "./Bag.css"
-export const Bag = ({pinCode, gotPin, product,bagProduct,setBagProduct, wishList}) => {
+import { DataContext } from '../../context/DataContext';
+export const Bag = () => {
     const [currentSection, setCurrentSection] = useState(1)
     const [selected, setSelected] = useState([])
     const [filteredProducts, setFilteredProducts] = useState([]);
     const bagId = bagProduct.map((bag)=>bag.productId)
     const bag = bagProduct.map((bag)=>bag)
+    const {pinCode, gotPin, product,bagProduct,setBagProduct, wishList} = useContext(DataContext)
     const handleCheckBoxChange = (productId)=>{
         if(selected.includes(productId)){
             setSelected(selected.filter((id)=> id !== productId))

@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react'
+import React, {useContext, useEffect, useState} from 'react'
 import "./BuyPage.css"
 import { FaShoppingBag } from "react-icons/fa";
 import { IoHeart } from "react-icons/io5";
@@ -12,9 +12,9 @@ import { ProductCard } from '../home/ProductCard';
 import { useParams } from 'react-router-dom';
 import fetch from '../../api/fetch';
 import { Link } from 'react-router-dom';
+import { DataContext } from '../../context/DataContext';
 
-export const BuyPage = ({category,product, setBagProduct,bagProduct,
-    pinCode,setPinCode, gotPin,setGotPin,wishList,handleAddToWishList }) => {
+export const BuyPage = () => {
     
     const {id} = useParams();
     const pincodePattern = /^[1-9][0-9]{2}\s?[0-9]{3}$/;
@@ -24,6 +24,7 @@ export const BuyPage = ({category,product, setBagProduct,bagProduct,
     const [isItemInBag, setItemInBag] = useState(false)
     const [isItemInWishList, setItemInWishList] = useState(false)
     const [size, setSize] = useState(null)
+    const {category,product, setBagProduct,bagProduct,pinCode,setPinCode, gotPin,setGotPin,wishList,handleAddToWishList } = useContext(DataContext)
     const handleRatingChange = (rating) => {
         setSelectedRating(rating);
       };
