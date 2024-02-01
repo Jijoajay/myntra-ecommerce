@@ -30,7 +30,6 @@ export const Address = () => {
 
     const handleRemoveAddress = async(address_id)=>{
         const addressToDelete = address.find((item)=>item.id === address_id)
-        console.log(addressToDelete)
         try {
             if(addressToDelete){
                 await fetch.delete(`/userAddress/${address_id}`)

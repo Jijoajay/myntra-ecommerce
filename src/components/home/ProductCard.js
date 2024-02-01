@@ -30,7 +30,7 @@ export const ProductCard = ({isProductDetail, category, handleAddToWishList, wis
   return (
     <>
       {category && category.length > 0 && category.map( (cat,index)=>(
-      <Link to={`${isProductDetail ? `/buyProduct/${cat.id}` : `/product/${cat.cateogoryName}`}`} style={{textDecoration:"none"}} >
+      <Link to={`${isProductDetail ? `/buyProduct/${cat.id}` : `/product/${cat.cateogoryName}`}`} style={{textDecoration:"none", width:"210px"}} >
           <div className={`${ isProductDetail ? "productCard-containers" : "productCard-container"}`} key={index} onMouseEnter={()=>handleMouseEnter(index)} onMouseLeave={()=>handleMouseLeave(index)} >
               <div className={`${isProductDetail ? "img-containers" : "img-container"}`}>
                 {isProductDetail ? isHover[index] ? (
@@ -47,7 +47,7 @@ export const ProductCard = ({isProductDetail, category, handleAddToWishList, wis
                 {isProductDetail ? ( isHover[index] ? (
                   <>
                     <div className='wishlist-productCard' onClick={(e)=>e.preventDefault()}>
-                      {Boolean(wishListId.includes(cat.id)) ? 
+                      {Boolean(wishListId?.includes(cat.id)) ? 
                       <>
                         <IoIosHeart   size={20} className='heart-active-icon'/>
                         <p>WISHLISTED</p>
@@ -59,7 +59,7 @@ export const ProductCard = ({isProductDetail, category, handleAddToWishList, wis
                       </>
                       }
                     </div>
-                    <p className='size'>Sizes: S </p>
+                    <p className='size'>sizes: {cat.size[0]}</p>
                     <h4>{isProductDetail ? "₹"+ cat.offerPrice : "Shop Now"}</h4>
                   </>
                 ):

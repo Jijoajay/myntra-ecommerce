@@ -6,23 +6,37 @@ import { ProductShower } from './ProductShower';
 
 export const ProductDetail = ({product, handleAddToWishList, wishList}) => {
   const {categoryName} = useParams()
-  const [selectedProduct, setSelectedProduct] = useState([])
+  const [lastOffer, setLastOffer] = useState("");
   const [selectedColor, setSelectedColor] = useState([])
   const [selectedBrand, setSelectedBrand] = useState([])
   const [selectedOffer, setSelectedOffer] = useState([]);
-  const [lastOffer, setLastOffer] = useState("");
+  const [selectedProduct, setSelectedProduct] = useState([])
+  const [dropDownContent, setDropDownContent] = useState("Recommended")
+
+  const handleClickClearAll = ()=>{
+    setSelectedBrand([])
+    setSelectedColor([])
+    setSelectedOffer([])
+    setSelectedProduct([])
+  }
 
   const filteredProduct = useMemo(() => {
-    return product.filter((cate) =>
-      (cate.category && cate.category.toLowerCase().includes(categoryName.toLowerCase())) ||
-      (cate.name && cate.name.toLowerCase().includes(categoryName.toLowerCase()))
+    if (!categoryName) return product; 
+    const lowercaseCategoryName = categoryName.toLowerCase();
+    return product.filter(item => 
+      (lowercaseCategoryName.includes(item.brandName.toLowerCase())) ||
+      (lowercaseCategoryName.includes(item.category.toLowerCase())) ||
+      (lowercaseCategoryName.includes(item.description.toLowerCase())) ||
+      (item.color && item.color.toLowerCase().includes(lowercaseCategoryName)) ||
+      (item.name && item.name.toLowerCase().includes(lowercaseCategoryName)) 
     );
   }, [product, categoryName]);
 
   const filterByBrands = useMemo(() =>{
+    console.log("starting")
     if(selectedBrand.length === 0)return filteredProduct;
     return filteredProduct.filter((pro)=>selectedBrand.includes(pro.brandName))
-  },[filteredProduct, selectedBrand])
+  },[filteredProduct, selectedBrand,handleClickClearAll])
   
   const discountPercent = (oldPrice, offerPrice)=>{
     return Math.ceil(((oldPrice - offerPrice)/oldPrice)*100)
@@ -41,6 +55,12 @@ export const ProductDetail = ({product, handleAddToWishList, wishList}) => {
     if(selectedProduct.length === 0){return filterByDiscount;}
     return filterByDiscount.filter((pro)=> selectedProduct.includes(pro.name))
   },[filterByDiscount, selectedProduct])
+
+  const filterProductBySortByCategory = useMemo(()=>{
+    if(dropDownContent === "Recommended")return filterCheckProduct
+    else if(dropDownContent==="High to Low") return filterCheckProduct.sort((a,b)=>b.offerPrice - a.offerPrice)
+    else if(dropDownContent==="Low to High") return filterCheckProduct.sort((a,b)=>a.offerPrice - b.offerPrice)
+  })
 
   const handleRemove = (item)=>{
     if(selectedBrand.includes(item)){
@@ -78,8 +98,11 @@ export const ProductDetail = ({product, handleAddToWishList, wishList}) => {
             setSelectedBrand={setSelectedBrand}
             setSelectedOffer={setSelectedOffer}
             setSelectedProduct={setSelectedProduct}
+            handleClickClearAll={handleClickClearAll}
             />
             <ProductShower 
+            dropDownContent={dropDownContent}
+            setDropDownContent={setDropDownContent}
             handleAddToWishList={handleAddToWishList}
             selectedBrand={selectedBrand}
             handleRemove={handleRemove}

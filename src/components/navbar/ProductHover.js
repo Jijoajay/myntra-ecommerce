@@ -1,39 +1,32 @@
 import React, { Fragment, useEffect, useState } from 'react'
-import fetch from '../../api/fetch'
 import { Link } from 'react-router-dom'
 
-export const ProductHover = ({cate}) => {
-    const [hoverCategory, setHoverCategory] = useState([])
+export const ProductHover = ({ cate, product }) => {
     const [uniqueCategory, setUniqueCategory] = useState([])
-    useEffect(()=>{
-        const fetchHoverItem = async()=>{
-            const response = await fetch.get('/hoverItems')
-            setHoverCategory(response.data)
-        }
-        fetchHoverItem();
-        
-    },[])
-    useEffect(()=>{
-        const category = new Set(hoverCategory.map((cate)=>cate.category))
-        setUniqueCategory(Array.from(category))
-    },[hoverCategory])
-  return (
-    <Fragment >
-      <div className="category-cont">
-        {uniqueCategory.map((cate) => (
-          <div key={cate} className='hover-product'>
-            <h4>{cate}</h4>
-            <div className='category-Link'>
-              {hoverCategory
-                .filter((item) => item.category === cate)
-                .map((filteredItem) => (
-                    <Link to={`/product/${filteredItem.name}`}><p key={filteredItem.id}>{filteredItem.name}</p></Link>
-                  
+    useEffect(() => {
+        const filteredCategory = new Set(product?.filter((item)=> item.ProductTo === cate).map((item) => item.clothingType))
+        setUniqueCategory(Array.from(filteredCategory))
+    }, [product])
+
+    return (
+        <Fragment>
+            <div className="category-cont">
+                {uniqueCategory.map((cat) => (
+                    <div key={cat} className='hover-product'>
+                        <h4>{cat}</h4>
+                        <div className='category-Link'>
+                            {[...new Set(product
+                                .filter((item) => item.ProductTo === cate && item.clothingType === cat)
+                                .map((filteredItem) => filteredItem.name || filteredItem.category))]
+                                .map((uniqueName) => (
+                                    <Link to={`/product/${uniqueName}`} className='link' key={uniqueName}>
+                                        <p>{uniqueName}</p>
+                                    </Link>
+                                ))}
+                        </div>
+                    </div>
                 ))}
             </div>
-          </div>
-        ))}
-      </div>
-    </Fragment>
-  )
+        </Fragment>
+    )
 }

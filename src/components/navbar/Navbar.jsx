@@ -3,18 +3,24 @@ import { FaUser } from 'react-icons/fa';
 import { IoIosHeart } from 'react-icons/io';
 import { FaShoppingBag } from 'react-icons/fa';
 import "./navbar.css"
-import {Link} from "react-router-dom";
+import {Link, useNavigate} from "react-router-dom";
 import { ProfileHover } from './ProfileHover';
 import { ProductHover } from './ProductHover';
-export const Navbar = ({isAuthenticate ,phNo,handleLogout}) => {
+import { IoIosSearch } from "react-icons/io";
+
+export const Navbar = ({isAuthenticate ,phNo,handleLogout, product, search, setSearch}) => {
     const [hoveredItem, setHoveredItems] = useState(null)
+    const navigate = useNavigate()
     const handleMouseEnter = (item)=>{
         setHoveredItems(item)
     }
     const handleMouseLeave = ()=>{
         setHoveredItems(null)
     }
-    
+    const handleSubmit = (e)=>{
+        e.preventDefault()
+        navigate(`/product/${search}`)
+    }
   return (
         <nav className='navbar-container'>
             <div><Link to="/" className='link'>
@@ -22,25 +28,35 @@ export const Navbar = ({isAuthenticate ,phNo,handleLogout}) => {
                 </Link></div>
             <div className='navbar-menu'>
                 <ul>
-                    <li onMouseEnter={()=>handleMouseEnter("men")} onMouseLeave={handleMouseLeave}>Men</li>
+                    <li onMouseEnter={()=>handleMouseEnter("men")} onMouseLeave={handleMouseLeave}><Link className='link' to="/men">MEN</Link></li>
                     { hoveredItem === "men" &&
                     <>
                         <div className='hover-menu-container'onMouseEnter={()=>handleMouseEnter("men")} onMouseLeave={handleMouseLeave}>
                             <ProductHover 
-                            cate={"men"} />
+                            product={product}
+                            cate={hoveredItem} />
                         </div>
                     </>}
-                    <li onMouseEnter={()=>handleMouseEnter("men")} onMouseLeave={handleMouseLeave}>Women</li>
+                    <li onMouseEnter={()=>handleMouseEnter("women")} onMouseLeave={handleMouseLeave}><Link to={'/women'} className='link'>WOMEN</Link> </li>
                     { hoveredItem === "women" &&
                     <>
                         <div className='hover-menu-container' onMouseEnter={()=>handleMouseEnter("women")} onMouseLeave={handleMouseLeave}>
                             <ProductHover 
-                            cate={"women"} />
+                            product={product}
+                            cate={hoveredItem} />
                         </div>
                     </>}
-                    <li>Kids</li>
-                    <li>Beauty</li>
+                    <li>KIDS</li>
+                    <li>BEAUTY</li>
                 </ul>
+            </div>
+            <div className='navbar-search'>
+                <form onSubmit={handleSubmit}>
+                    <IoIosSearch  size={16} className='search-icon'/>
+                    <input type="search" placeholder='Search for product,brands and more' 
+                    value={search} onChange={(e) => setSearch(e.target.value)} 
+                    />
+                </form>
             </div>
             <div className='navbar-icons'>
                 <div className='icon profile' onMouseEnter={()=>handleMouseEnter("profile")} onMouseLeave={handleMouseLeave}>
@@ -61,12 +77,14 @@ export const Navbar = ({isAuthenticate ,phNo,handleLogout}) => {
                 <div className='icon heart' >
                     <Link to='/wishlist' className='icon heart'>
                         <IoIosHeart size={20}  />
-                        wishlist
+                        <p>wishlist</p>
                     </Link>
                 </div>
                 <div className='icon bag'>
-                <Link to="/checkout" className='link bag'><FaShoppingBag size={20}  />
-                    Bag</Link>
+                <Link to="/checkout" className='link bag'>
+                    <FaShoppingBag size={20}  />
+                    <p>Bag</p>
+                    </Link>
                 </div>
             </div>
         </nav>

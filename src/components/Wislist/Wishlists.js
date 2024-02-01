@@ -5,9 +5,7 @@ import { RxCross1 } from "react-icons/rx";
 export const Wishlists = ({wishList, 
 handleRemoveFromWishList,product}) => {
     const productId = wishList.map((list)=> list.productId)
-    console.log("productId",productId)
     const filteredWishListItem = product.filter((item)=>productId.includes(item.id))
-    console.log("filteredWishListItem",filteredWishListItem)
   return (
     <main>
         <section className='wishList-container'>

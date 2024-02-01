@@ -2,7 +2,7 @@ import React,{useEffect, useState} from 'react'
 import { GoDotFill } from "react-icons/go";
 import { ProductCard } from '../home/ProductCard';
 
-export const Carousel = ({carousel,delay, isProductDetail}) => {
+export const Carousel = ({carousel,isProductDetail}) => {
   const [imgIndex, setImgIndex] = useState(0)
   useEffect(() => {
     const timeoutId = setTimeout(() => {
@@ -32,7 +32,7 @@ export const Carousel = ({carousel,delay, isProductDetail}) => {
       </div>
       <div className={`${isProductDetail ? "productDot" : "dot"}`} >
         {carousel.map((_, id) => (
-          <GoDotFill size={isProductDetail ? 13 : 24} key={id} onClick={()=>selectImage(id)} className={`${id === imgIndex ? "dot-active" : "not-active"}`} />
+          <GoDotFill size={isProductDetail ? 13 : 18} key={id} onClick={()=>selectImage(id)} className={`${id === imgIndex ? "dot-active" : "not-active"}`} />
         ))}
       </div>
     </div>

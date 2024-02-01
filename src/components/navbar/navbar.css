@@ -6,7 +6,6 @@
 
 .navbar-container{
     background: none;
-    font-family:  Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -30,22 +29,50 @@
     text-align: center;
     margin-left: 20px;
     list-style: none;
-    font-size: 20px;
+    font-size: 14px;
     font-weight: 800;
-    color: black;
+    color: #282c3f;
     transition: background-color 0.3s ease;
+}
+.navbar-search form{
+    width: 440px;
+    height: 40px;
+    display: flex;
+}
+.navbar-search .search-icon{
+    position: relative;
+    left: 30px;
+    top: 13px;
+    cursor: pointer;
+}
+
+.navbar-search input{
+    background-color: #F5F5F6;
+    width: 440px;
+    height: 40px;
+    padding-left: 45px;
+    padding-right: 20px;
+    border: white;
+}
+.navbar-search input:focus{
+    outline: none;
+    border: .1px solid #e5e5e8;
+    background-color: white;
 }
 .navbar-icons{
     display: flex;
     justify-content: space-around;
     align-items: center;
     height: 80px;
+    gap: 15px;
+    color: #282c3f;
+
 }
 .icon{
     cursor: pointer;
     display: flex;
     flex-direction: column;
-    margin-left: 20px;
+    font-size: 14px;
 }
 .profile{
     height: 80px;
@@ -99,7 +126,6 @@
 .profileItem button{
     height: 30px;
     color: #FF3F6C;
-    font-weight: 800;
     border: .1px solid gray;
     background-color: white;
 
@@ -116,10 +142,10 @@
 .hover-menu-container{
     position: absolute;
     top: 100%;
-    left: 30%;
+    left: 20%;
     background-color: white;
     padding: 10px;
-    width: 400px;
+    width: 800px;
     height: auto;
     display: flex;
     flex-flow: column;

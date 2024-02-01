@@ -10,8 +10,11 @@ import fetch from './api/fetch';
 import { Login } from './components/Login/Login';
 import { Wishlists } from './components/Wislist/Wishlists';
 import { Order } from './components/Order/Order';
+import { Men } from './components/MenuItem/Men';
 function App() {
   const [carousel, setCarousel] = useState([])
+  const [search, setSearch] = useState("")
+  const [carouselBase, setCarouselBase] = useState([])
   const [category, setCategory] = useState([])
   const [product, setProduct] = useState([])
   const [phNo, setPhNo] = useState(null)
@@ -34,9 +37,10 @@ function App() {
     const fetchCategoryData = async()=>{
       try {
         const response = await fetch.get('/category')
+        console.log("getting catgory data")
         setCategory(response.data)
       } catch (error) {
-        console.log("error",error)
+        console.log("error at category",error.message)
       }
     }
     fetchCategoryData();
@@ -60,9 +64,13 @@ function App() {
       }
     }
     fetchBagData();
-
-    
+      const fetchCarousel = async()=>{
+          const response = await fetch.get('/carouselBase')
+          setCarouselBase(response.data)
+      }
+    fetchCarousel();
   },[])
+
   const handleAddToWishList = async(product_id)=>{
     try {
       const wishListId = wishList.length ? wishList.length + 1 : 1
@@ -78,9 +86,7 @@ function App() {
   }
   const handleRemoveFromWishList = async(product_id)=>{
     try {
-      console.log(product_id)
       const response = await fetch.delete(`/wishlist/${product_id}`)
-      console.log(response.data)
       setWishList(wishList.filter((list)=>list.productId !== product_id))
     } catch (error) {
       console.log(error)
@@ -97,6 +103,7 @@ function App() {
     }
     fetchWishListData();
   },[setIsAuthenticate])
+  
   useEffect(()=>{
     const authenticateUser = ()=>{
       const phoneNumber = localStorage.getItem("phoneNumber")
@@ -113,24 +120,42 @@ function App() {
     setIsAuthenticate(false)
     localStorage.removeItem('phoneNumber')
   }
-
-  
   
   return (
     <div className="App">
       <Navbar 
       phNo={phNo}
+      search={search}
+      product={product}
+      setSearch={setSearch} 
       isAuthenticate = {isAuthenticate}
       handleLogout={handleLogout}
       />
       <Routes>
-        <Route path='/' element={<Home carousel={carousel} category={category}/>} />
+        <Route path='/' 
+        element={<Home 
+        carousel={carousel} 
+        category={category} 
+        carouselBase={carouselBase}/>} />
+        <Route path='/men'
+        element={<Men 
+        carousel={carousel}
+        category={category}
+        />}/>
+        <Route path='/women'
+        element={<Men 
+        carousel={carousel}
+        category={category}
+        women={true}
+        />}
+        />
         <Route path='/login' element={<Login 
         phNo={phNo}
         setPhNo={setPhNo}
         setIsAuthenticate={setIsAuthenticate}
         />} />
-        <Route path='/product/:categoryName'element={<ProductDetail 
+        <Route path='/product/:categoryName'
+        element={<ProductDetail 
         product={product} 
         category={category}
         wishList={wishList}

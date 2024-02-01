@@ -11,6 +11,7 @@ import { ProductDetail } from './ProductDetail';
 import { ProductCard } from '../home/ProductCard';
 import { useParams } from 'react-router-dom';
 import fetch from '../../api/fetch';
+import { Link } from 'react-router-dom';
 
 export const BuyPage = ({category,product, setBagProduct,bagProduct,
     pinCode,setPinCode, gotPin,setGotPin,wishList,handleAddToWishList }) => {
@@ -105,7 +106,7 @@ export const BuyPage = ({category,product, setBagProduct,bagProduct,
                         <div className='price-size-buttons'>
                             {isItemInBag ? 
                             <button className='bag-icon' > 
-                                <p>Go to Bag</p> 
+                                <p><Link to={'/checkout'} className='link'>Go to Bag</Link></p> 
                                 <p><FaShoppingBag /></p>
                             </button>
                             :

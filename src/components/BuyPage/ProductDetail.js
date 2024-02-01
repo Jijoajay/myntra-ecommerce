@@ -12,7 +12,6 @@ export const ProductDetail = ({selectedRating, handleRatingChange,product}) => {
         <div className='product-details'>
             {product.productDetails.map((det,index)=>(
                 <>
-                {console.log("dlt",det)}
                 <div className='title' key={index}>
                     <h3>PRODUCT DETAIL</h3>
                     <p> <CiViewList size={20}/></p>

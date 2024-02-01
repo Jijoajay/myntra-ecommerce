@@ -7,6 +7,7 @@
     justify-content: center;
     align-items: center;
     height: 70px;
+    border-bottom: .1px solid gray;
     
 }
 header p{
@@ -17,12 +18,14 @@ header p{
     display: flex;
     justify-content:center;
     align-items: center;
-    gap: 50px;
+    gap: 30px;
 }
 .item-place{
     display: flex;
     flex-direction: column;
     gap: 20px;
+    padding: 2em 20px 0px 0px ;
+    border-right: .1px solid gray;
 }
 .login-item{
     display: flex;
@@ -88,7 +91,9 @@ header p{
 .order-place{
     display: flex;
     flex-direction: column;
+    align-self: start;
     gap: 20px;
+    padding-top: 2em;
 }
 .coupons{
     display: flex;

@@ -40,7 +40,6 @@ export const AddEditForm = ({ setIsAddAddress,setIsEditAddress, address, setAddr
     
         try {
             const response = await fetch.put(`/userAddress/${address_id}`, updatedAddress);
-            console.log(response.data);
         } catch (error) {
             console.log('Error found at updating address:', error.message);
         }
@@ -78,7 +77,6 @@ export const AddEditForm = ({ setIsAddAddress,setIsEditAddress, address, setAddr
         setIsAddAddress(false)
     };
     const addresses = address.find((item)=>item.id === addressId)
-    {console.log("name", addresses.address.name)}
 
     return (
         <>

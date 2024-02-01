@@ -4,7 +4,6 @@ import { Link } from 'react-router-dom';
 
 export const OrderSidebar = () => {
     const [sidebar, setSidebar] = useState("overview")
-    console.log(sidebar)
   return (
     <div className='sidebar-sidebar'>
         <div>

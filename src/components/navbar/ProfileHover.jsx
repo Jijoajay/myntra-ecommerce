@@ -1,7 +1,6 @@
 import React from 'react'
 import {Link} from "react-router-dom"
 export const ProfileHover = ({isAuthenticate, phNo, handleLogout}) => {
-  console.log(isAuthenticate)
   return (
     <>
         <div className='profileItem'>

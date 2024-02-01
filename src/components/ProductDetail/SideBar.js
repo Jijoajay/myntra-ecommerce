@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react'
 
 export const SideBar = ({selectedBrand, setSelectedBrand, selectedProduct, 
     setSelectedProduct, filterByBrands, filteredProduct, handleFilterByDiscount
-  ,setSelectedColor, selectedColor, selectedOffer, setSelectedOffer}) => {
+  ,setSelectedColor, selectedColor, selectedOffer, setSelectedOffer, handleClickClearAll}) => {
 
       const [uniqueBrand, setUniqueBrand] = useState([]);
       const [uniquecolor, setUniqueColor] = useState([]);
@@ -42,7 +42,6 @@ export const SideBar = ({selectedBrand, setSelectedBrand, selectedProduct,
           const handleColorCheck = (item)=>{
             const updatedColor = [...selectedColor]
             const index = updatedColor.indexOf(item)
-            console.log(index)
             if(index === -1){
               updatedColor.push(item)
             }else{
@@ -56,11 +55,9 @@ export const SideBar = ({selectedBrand, setSelectedBrand, selectedProduct,
             const index = updatedDiscount.indexOf(item)
             if(index === -1){
               if(selectedOffer.length > 0){
-                console.log("second")
                 updatedDiscount.splice(0,1)
                 updatedDiscount.push(item)
               }else{
-                console.log("first")
                 updatedDiscount.push(item)
               }
             }else{
@@ -68,13 +65,14 @@ export const SideBar = ({selectedBrand, setSelectedBrand, selectedProduct,
             }
             setSelectedOffer(updatedDiscount)
           }
-          console.log("selectedOffer",selectedOffer)
           let count = 0
+          
+
   return (
     <div className='sidebar'>
               <div className='productNavs'>
                 <h4>Filters</h4>
-                <h4>CLEAR ALL</h4>
+                <h4 className='clear' onClick={handleClickClearAll}>CLEAR ALL</h4>
               </div>
               <div className='sidebar-items'>
                   <div className='items categories'>
@@ -123,8 +121,10 @@ export const SideBar = ({selectedBrand, setSelectedBrand, selectedProduct,
                          checked={selectedColor.includes(color)}
                          onChange={()=>handleColorCheck(color)}
                          />
-                         <p style={{backgroundColor:color}} className='round' ></p>
-                         <p>{color}</p>
+                         <div className='color-div'>
+                          <p style={{backgroundColor:color}} className='round' ></p>
+                          <p>{color}</p>
+                         </div>
                        </>
                      </div>
                     ))}
