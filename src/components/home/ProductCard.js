@@ -8,7 +8,7 @@ import { IoIosHeart } from "react-icons/io";
 
 export const ProductCard = ({isProductDetail, category, handleAddToWishList, wishList}) => {
   
-  const [isHover, setIsHover] = useState(Array(category.length).fill(false))
+  const [isHover, setIsHover] = useState(category ? Array(category.length).fill(false) : []);
   const wishListId = wishList?.map((item)=>item.productId)
 
   const handleMouseEnter = (id) => {
@@ -30,14 +30,14 @@ export const ProductCard = ({isProductDetail, category, handleAddToWishList, wis
   return (
     <>
       {category && category.length > 0 && category.map( (cat,index)=>(
-      <Link to={`${isProductDetail ? `/buyProduct/${cat.id}` : `/product/${cat.cateogoryName}`}`} style={{textDecoration:"none", width:"210px"}} >
+      <Link to={`${isProductDetail ? `/buyProduct/${cat.id}` : `/product/${cat.cateogoryName}`}`} style={{textDecoration:"none", width:"210px"}} key={index}>
           <div className={`${ isProductDetail ? "productCard-containers" : "productCard-container"}`} key={index} onMouseEnter={()=>handleMouseEnter(index)} onMouseLeave={()=>handleMouseLeave(index)} >
               <div className={`${isProductDetail ? "img-containers" : "img-container"}`}>
                 {isProductDetail ? isHover[index] ? (
                     <Carousel carousel={cat.images} isProductDetail={true}/>
                   ):(
-                  <img src={cat.img || cat.thumbImg} />
-                ):<img src={cat.img || cat.thumbImg} />}
+                  <img src={cat.img || cat.thumbImg} alt="product"/>
+                ):<img src={cat.img || cat.thumbImg} alt="product" />}
               </div>
               {isProductDetail && !isHover[index] ? (
                 <p className="ratings"> 4.5 <TiStarFullOutline size={16}/> | 19.4k</p>

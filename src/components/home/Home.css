@@ -7,7 +7,7 @@
 }
 .medal-worthy-brand h2{
     display: flex;
-    justify-content: start;
+    justify-content: flex-start;
     align-items: center;
     padding: 0px 0px 2rem 10px;
     gap: 10px;
@@ -90,7 +90,7 @@
 }
 .category-title{
     display: flex;
-    justify-content: start;
+    justify-content: flex-start;
     align-items: center;
     padding: 2rem 0px 5rem 3rem;
 }

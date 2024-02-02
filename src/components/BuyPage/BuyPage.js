@@ -15,7 +15,7 @@ import { Link } from 'react-router-dom';
 import { DataContext } from '../../context/DataContext';
 
 export const BuyPage = () => {
-    
+    const {category,product, setBagProduct,bagProduct,pinCode,setPinCode, gotPin,setGotPin,wishList,handleAddToWishList } = useContext(DataContext)
     const {id} = useParams();
     const pincodePattern = /^[1-9][0-9]{2}\s?[0-9]{3}$/;
     const filteredProduct = product.find((prod)=>prod.id.toString() === id.toString());
@@ -24,7 +24,6 @@ export const BuyPage = () => {
     const [isItemInBag, setItemInBag] = useState(false)
     const [isItemInWishList, setItemInWishList] = useState(false)
     const [size, setSize] = useState(null)
-    const {category,product, setBagProduct,bagProduct,pinCode,setPinCode, gotPin,setGotPin,wishList,handleAddToWishList } = useContext(DataContext)
     const handleRatingChange = (rating) => {
         setSelectedRating(rating);
       };
@@ -59,7 +58,7 @@ export const BuyPage = () => {
             setItemInWishList(Boolean(list))
         }
         checkItemInList();
-    },[wishList])
+    },[wishList, id])
     
     const addToBag = async(product_id)=>{
         try {
@@ -70,7 +69,7 @@ export const BuyPage = () => {
                 quantity:1,
                 size:size
             }
-            const response = await fetch.post('/bag',newItem)
+            await fetch.post('/bag',newItem)
             setBagProduct([...bagProduct , newItem]);
         } catch (error) {
             console.log("error",error)

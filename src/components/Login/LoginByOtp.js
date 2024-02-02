@@ -1,4 +1,4 @@
-import React, {Fragment, useState } from 'react'
+import React from 'react'
 
 export const LoginByOtp = ({otpInputRef, otp, phNo, handleKeyChange, handleSubmit,
 handleOtpChange, handleResendOtp, setContWithPassword, isContinue,count, setCount}) => {
@@ -6,7 +6,6 @@ handleOtpChange, handleResendOtp, setContWithPassword, isContinue,count, setCoun
     setTimeout(()=>{
         const timer = ()=>{
             if(count === 0){
-                // alert('OTP expired')
                 console.log("otp expired")
             }else if(isContinue){
                 setCount((prevCount)=> prevCount - 1)
@@ -44,7 +43,7 @@ handleOtpChange, handleResendOtp, setContWithPassword, isContinue,count, setCoun
             )
         }
         <p>login using <span className='otp-span' onClick={()=>setContWithPassword(true)}>password</span></p>
-        <p>Have trouble loggin in ? <a href="#">Get help</a></p>
+        <p>Have trouble loggin in ? <a href="https://www.myntra.com/contactus">Get help</a></p>
     </>
   )
 }

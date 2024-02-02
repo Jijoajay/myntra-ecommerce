@@ -8,7 +8,6 @@ import { DataContext } from '../../context/DataContext';
 
 export const ProductDetail = () => {
   const {categoryName} = useParams()
-  const [lastOffer, setLastOffer] = useState("");
   const [selectedColor, setSelectedColor] = useState([])
   const [selectedBrand, setSelectedBrand] = useState([])
   const [selectedOffer, setSelectedOffer] = useState([]);
@@ -38,7 +37,7 @@ export const ProductDetail = () => {
     console.log("starting")
     if(selectedBrand.length === 0)return filteredProduct;
     return filteredProduct.filter((pro)=>selectedBrand.includes(pro.brandName))
-  },[filteredProduct, selectedBrand,handleClickClearAll])
+  },[filteredProduct, selectedBrand])
   
   const discountPercent = (oldPrice, offerPrice)=>{
     return Math.ceil(((oldPrice - offerPrice)/oldPrice)*100)
@@ -62,7 +61,7 @@ export const ProductDetail = () => {
     if(dropDownContent === "Recommended")return filterCheckProduct
     else if(dropDownContent==="High to Low") return filterCheckProduct.sort((a,b)=>b.offerPrice - a.offerPrice)
     else if(dropDownContent==="Low to High") return filterCheckProduct.sort((a,b)=>a.offerPrice - b.offerPrice)
-  })
+  },[filterCheckProduct, dropDownContent])
 
   const handleRemove = (item)=>{
     if(selectedBrand.includes(item)){

@@ -1,4 +1,3 @@
-import { values } from 'lodash';
 import React, { useEffect, useState } from 'react'
 
 export const SideBar = ({selectedBrand, setSelectedBrand, selectedProduct, 
@@ -16,7 +15,7 @@ export const SideBar = ({selectedBrand, setSelectedBrand, selectedProduct,
             setUniqueBrand(brandSet)
             const colorSet = new Set(filteredProduct.map((item)=>item.color))
             setUniqueColor(colorSet)
-          },[filteredProduct, filterByBrands])
+          },[filteredProduct, filterByBrands,selectedBrand.length])
         
           const handleFilterCheck = (item)=>{
             const updatedProduct = [...selectedProduct]

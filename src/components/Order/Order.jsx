@@ -47,7 +47,7 @@ export const Order = ({comp}) => {
                             />
                             : comp === "address"
                             ? <Address />
-                            : comp == "editprofile"
+                            : comp === "editprofile"
                             ? <ProfileEditForm 
                             userInfo={userInfo}
                             setUserInfo={setUserInfo}

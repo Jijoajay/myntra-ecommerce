@@ -6,7 +6,7 @@ export const ProductHover = ({ cate, product }) => {
     useEffect(() => {
         const filteredCategory = new Set(product?.filter((item)=> item.ProductTo === cate).map((item) => item.clothingType))
         setUniqueCategory(Array.from(filteredCategory))
-    }, [product])
+    },[cate, product])
 
     return (
         <Fragment>

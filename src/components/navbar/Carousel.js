@@ -1,6 +1,5 @@
 import React,{useEffect, useState} from 'react'
 import { GoDotFill } from "react-icons/go";
-import { ProductCard } from '../home/ProductCard';
 
 export const Carousel = ({carousel,isProductDetail}) => {
   const [imgIndex, setImgIndex] = useState(0)
@@ -12,7 +11,7 @@ export const Carousel = ({carousel,isProductDetail}) => {
     return () => {
       clearTimeout(timeoutId);
     };
-  },[imgIndex]);
+  },[imgIndex, carousel?.length]);
   
   const selectImage = (id) => {
     if (id !== imgIndex) {

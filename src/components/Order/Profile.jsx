@@ -1,6 +1,5 @@
-import React, {useState} from 'react'
+import React from 'react'
 import { ProfileTable } from './ProfileTable'
-import { ProfileEditForm } from './ProfileEditForm'
 
 export const Profile = ({userInfo}) => {
   return (

@@ -7,12 +7,12 @@ import { RxCross1 } from "react-icons/rx";
 import "./Bag.css"
 import { DataContext } from '../../context/DataContext';
 export const Bag = () => {
+    const {pinCode, gotPin, product,bagProduct} = useContext(DataContext)
     const [currentSection, setCurrentSection] = useState(1)
     const [selected, setSelected] = useState([])
     const [filteredProducts, setFilteredProducts] = useState([]);
     const bagId = bagProduct.map((bag)=>bag.productId)
     const bag = bagProduct.map((bag)=>bag)
-    const {pinCode, gotPin, product,bagProduct,setBagProduct, wishList} = useContext(DataContext)
     const handleCheckBoxChange = (productId)=>{
         if(selected.includes(productId)){
             setSelected(selected.filter((id)=> id !== productId))
@@ -37,7 +37,7 @@ export const Bag = () => {
     useEffect(()=>{
         const filteredProducts = product.filter((pro) => bagId.includes(pro.id));
         setFilteredProducts(filteredProducts)
-    },[])
+    },[bagId, product])
   return (
     <main className='bag-main'>
         <header>
@@ -160,7 +160,7 @@ export const Bag = () => {
                             <div>
                                 <h4>Buyed for your loved one</h4>
                                 <p>Gift wrap and personalised message on card,<br/>Only for ₹25</p>
-                                <a>ADD GIFT WRAP</a>
+                                <p>ADD GIFT WRAP</p>
                             </div>
                         </div>
                     </div>

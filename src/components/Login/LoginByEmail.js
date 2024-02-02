@@ -7,9 +7,9 @@ export const LoginByEmail = ({placeholder, handlePlaceHolder, Passplaceholder, r
     const handleClickReset = ()=>{
         setIsReset(true)
     }
-    const handleSendLink = ()=>{
-        console.log("sending to the email")
-    }
+    // const handleSendLink = ()=>{
+    //     console.log("sending to the email")
+    // }
     return (
     <>
         {
@@ -50,7 +50,7 @@ export const LoginByEmail = ({placeholder, handlePlaceHolder, Passplaceholder, r
                     </div>
                     <button>Login</button>
                     <p>Forget your password <span className='otp-span' onClick={()=>handleClickReset()}>Reset here</span></p>
-                    <p>Have trouble loggin in ? <a href="#">Get help</a></p>
+                    <p>Have trouble loggin in ? <a href="https://www.myntra.com/contactus">Get help</a></p>
                 </>
             )
         }

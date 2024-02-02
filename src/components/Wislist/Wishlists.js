@@ -18,7 +18,7 @@ export const Wishlists = () => {
                     <div>
                         <div className='wishlist-img'>
                             <p className='wishList-cross' onClick={()=>handleRemoveFromWishList(item.id)}><RxCross1 size={22}/></p>
-                            <img src={item.thumbImg}/>
+                            <img src={item.thumbImg} alt='wislist-product'/>
                         </div>
                         <div className='wishList-detail'>
                             <p>{item.description}</p>

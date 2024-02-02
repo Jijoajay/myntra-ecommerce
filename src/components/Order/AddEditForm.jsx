@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import fetch from '../../api/fetch';
 
 export const AddEditForm = ({ setIsAddAddress,setIsEditAddress, address, setAddress,edit,addressId }) => {
@@ -39,7 +39,7 @@ export const AddEditForm = ({ setIsAddAddress,setIsEditAddress, address, setAddr
         };
     
         try {
-            const response = await fetch.put(`/userAddress/${address_id}`, updatedAddress);
+            await fetch.put(`/userAddress/${address_id}`, updatedAddress);
         } catch (error) {
             console.log('Error found at updating address:', error.message);
         }
@@ -54,7 +54,7 @@ export const AddEditForm = ({ setIsAddAddress,setIsEditAddress, address, setAddr
             address:formData
         }
         try {
-            const response = await fetch.post('/userAddress', newAddress)
+            await fetch.post('/userAddress', newAddress)
             if (formData.isDefault){
                 setAddress([newAddress, ...address])
             }else{

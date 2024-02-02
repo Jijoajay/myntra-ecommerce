@@ -71,7 +71,7 @@ export const DataProvider = ({children})=>{
             id:wishListId,
             productId:product_id
         }
-        const reponse = await fetch.post('/wishlist',newItem)
+        await fetch.post('/wishlist',newItem)
         setWishList([...wishList, newItem])
         } catch (error) {
         console.error(error.message)
@@ -79,7 +79,7 @@ export const DataProvider = ({children})=>{
     }
     const handleRemoveFromWishList = async(product_id)=>{
         try {
-        const response = await fetch.delete(`/wishlist/${product_id}`)
+        await fetch.delete(`/wishlist/${product_id}`)
         setWishList(wishList.filter((list)=>list.productId !== product_id))
         } catch (error) {
         console.log(error)
