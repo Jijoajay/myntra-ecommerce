@@ -348,11 +348,34 @@
     padding: 15px 25px 15px 25px;
     gap: 10px;
     cursor:auto;
+    height: 165px;
 }
 .address-holder{
     display: flex;
     align-items: center;
     justify-content: space-between;
+}
+
+.checkout-address-holder{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+.checkout-address-holder .holder-type{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.holder-type h5{
+    margin: 0;
+    padding: 0;
+}
+.holder-type p{
+    border: 1px solid forestgreen;
+    color:forestgreen;
+    background-color: white;
+    border-radius: 45%;
+    padding: 5px 10px 5px 10px;
 }
 .address-place{
     border-radius: 20px;
@@ -371,7 +394,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100%;
     color: blue;
     font-weight: 900;
     cursor: pointer;
@@ -455,9 +477,56 @@
     color: white;
     border: none;
 }
-
-
-
+.payment-container{
+    display: flex;
+    align-items: start;
+    gap: 20px;
+    border: .2px solid lightgray;
+}
+.payment-sidebar{
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+}
+.payment-sidebar div{
+    display: flex;
+    gap: 10px;
+    background-color: lightgray;
+    padding: 15px;
+    border-bottom: .2px solid gray;
+}
+.payment-options{
+    margin-top: 30px;
+}
+.payment-options .options{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.options div{
+    display: flex;
+    gap: 20px;
+}
+.gpay-icon{
+  border: .2px solid black;
+  padding: 8px;
+  border-radius: 50%;  
+}
+.upi-options{
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+}
+.options-upi{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+.payment-sidebar .payment-active{
+    transition: .2s ease-in;
+    background-color: white;
+    color: black;
+}
 
 
 

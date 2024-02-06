@@ -2,6 +2,6 @@ import axios from "axios"
 
 export default axios.create(
     {
-        baseURL:"http://localhost:3500" 
+        baseURL:"https://myntra-data-xl2z.onrender.com" 
     }
 )

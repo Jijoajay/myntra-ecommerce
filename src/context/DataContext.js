@@ -77,10 +77,10 @@ export const DataProvider = ({children})=>{
         console.error(error.message)
         }
     }
-    const handleRemoveFromWishList = async(product_id)=>{
+    const handleRemoveFromWishList = async(id)=>{
         try {
-        await fetch.delete(`/wishlist/${product_id}`)
-        setWishList(wishList.filter((list)=>list.productId !== product_id))
+        await fetch.delete(`/wishlist/${id}`)
+        setWishList(wishList.filter((list)=>list.productId !== id))
         } catch (error) {
         console.log(error)
         }

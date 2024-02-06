@@ -36,6 +36,7 @@ header p{
     border: .5px solid black;
     padding: 10px;
 }
+
 .login-item button{
     margin-right: 30px;
     border: 1px solid red;
@@ -44,6 +45,45 @@ header p{
     font-weight: 600;
     height: 40px;
     width: 120px;
+}
+.pincode-container{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 40%;
+    left: 40%;
+    height: 130px;
+    width: 460px;
+    background-color: white;
+    border: none;
+    border-radius: 5px;
+}
+.pincode-title{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: .5px solid lightgray;
+    height: 58px;
+    padding: 10px;
+}
+.pincode-form form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 78px;
+    margin: 0px 0px 20px 80px;
+}
+.pincode-form form input{
+    height: 45px;
+    width: 360px;
+    padding-left: 20px;
+}
+.pincode-form form button{
+    border: none;
+    background-color: transparent;
+    position: relative;
+    right: 95px;
+    cursor: pointer;
 }
 .offer-zone{
     display: flex;
@@ -68,6 +108,9 @@ header p{
 .checkout-items div{
     display: flex;
     gap: 10px;
+}
+.checkout-items .remove-wishlist p{
+    cursor: pointer;
 }
 .cloth-container{
     display: flex;
@@ -103,6 +146,29 @@ header p{
 .coupon{
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    margin: 10px 10px 0px 10px;
+    padding-bottom: 10px;
+    border-bottom: .2px solid lightgray;
+}
+.coupon button{
+    border: 1px solid #FF3F6C;
+    background-color: white;
+    color: #FF3F6C;
+    font-weight: 700;
+    padding: 10px;
+}
+.coupons .green{
+    color: rgb(71, 217, 71);
+}
+.coupons .red{
+    color: #FF3F6C;
+    cursor: pointer;
+    font-weight: 600;
+}
+.coupon{
+    display: flex;
+    justify-content: space-between;
 }
 .coupon div{
     display: flex;
@@ -123,7 +189,14 @@ header p{
     gap: 10px;
     padding: 10px 0px 10px 0px;
 }
+.table-mrp{
+    padding-bottom: 10px;
+    border-bottom: .2px solid lightgray;
+}
 .total{
+    font-weight: 900;
+}
+.total-number{
     font-weight: 900;
 }
 .coupons span{
@@ -133,8 +206,12 @@ header p{
     cursor: pointer;
 }
 .coupons .placeOrder{
-    color: #FF3F6C;
+    background-color: #FF3F6C;
     height: 50px;
+    color: white;
+    text-align: center;
+    font-weight: 700;
+    border: none;
 }
 .underLine{
     text-decoration:underline;
@@ -150,8 +227,51 @@ header p{
     display: flex;
     gap: 10px;
 }
+
 .off{
     color: #FF3F6C;
+}
+.remove-container{
+    position: absolute;
+    top: 45%;
+    left: 40%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: white;
+    z-index: 10;
+    width: 360px;
+    height: 135px;
+    padding: 10px;
+}
+.remove-img-container{
+    display: flex;
+    gap: 10px;
+    justify-content: space-between;
+    align-items: center;
+    height: 76px;
+    border-bottom: .2px solid lightgray;
+}
+.remove-img-container img{
+    height: 66px;
+    width: 48px;
+}
+.remove-buttons{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+.remove-buttons button{
+    width: 150px;
+    height: 40px;
+    background-color: transparent;
+    border: none;
+    font-size: 17px;
+    font-weight: 600;
+}
+.remove-buttons .wishlist{
+    color: #FF3F6C;
+    border-left: .2px solid lightgray;
 }
 .span{
     text-decoration: line-through;
@@ -162,7 +282,9 @@ header p{
     margin: 5px;
     padding: 5px;
 }
-
+.hori{
+    border-bottom: .2px solid black;
+}
 
 
 
